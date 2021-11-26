@@ -8,7 +8,8 @@ using Valve.VR.InteractionSystem;
 
 public class MainMenuController : MonoBehaviour
 {
-    [Header("Другое")] [SerializeField] private Transform target;
+    [Header("Другое")] 
+    [SerializeField] private Transform target;
     [SerializeField] private GameObject canvasCenter;
     private Vector3 position;
 
@@ -17,9 +18,6 @@ public class MainMenuController : MonoBehaviour
     [SerializeField] private GameObject[] disableOnGameStart;
     [SerializeField] private SteamVR_LaserPointer leftLaserPointer;
     [SerializeField] private SteamVR_LaserPointer rightLaserPointer;
-
-    [SerializeField] private GameObject engine;
-    [SerializeField] private DBForOptimizedEngine engineScript;
 
     [Header("Выбор комнат и сетевой код")]
     [Tooltip("Поставьте галочку в PlayMode, чтобы вызвался метод входа в случайную комнату")]
@@ -64,8 +62,6 @@ public class MainMenuController : MonoBehaviour
         foreach (var gObject in enableOnGameStart)
         {
             if (gObject) gObject.SetActive(true);
-
-            if (gObject == engine) engineScript.enabled = true;
         }
 
         foreach (var gObject in disableOnGameStart)

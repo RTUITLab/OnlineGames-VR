@@ -81,12 +81,6 @@ public class SyncTranshorm : MonoBehaviourPunCallbacks
 
     public void CatchObj(bool active) //Вызывается когда игрок схватил или отпустил предмет.
     {
-        if (transform.GetChild(0).name == "Двигатель(ось)")
-        {
-            // Комната закрывается при взятии в руку первой детали.
-            Networking.ConstructionStarted = true;
-        }
-
         Part part = GetComponent<Part>();
         if (part)
         {

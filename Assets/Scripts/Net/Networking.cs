@@ -18,7 +18,6 @@ public class Networking : MonoBehaviourPunCallbacks
     private MainMenuController mainMenu;
     private RoomListingsMenu roomListingMenu;
 
-    public static bool ConstructionStarted = false;
     private bool roomClosed = false;
 
     public Text text;
@@ -34,7 +33,7 @@ public class Networking : MonoBehaviourPunCallbacks
     }
 
     private void Update() {
-        if (ConstructionStarted && !roomClosed)
+        if (PhotonNetwork.PlayerList.Length == 2 && !roomClosed)
         {
             Debug.Log("Room closed!");
 
