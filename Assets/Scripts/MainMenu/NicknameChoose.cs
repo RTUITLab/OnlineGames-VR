@@ -9,6 +9,10 @@ public class NicknameChoose : MonoBehaviour
     [SerializeField] private bool resetNicknameAfterRestart = true;
     private string nickname;
 
+    private string[] nicknameList = { "Умный король", "Бедный студент", "Олег Олегович",
+        "Крестик Ноликович", "X Æ A-12", "Просто робот", "Профессионал", "Любитель фанты",
+        "Клавиатурный герой", "Лучший дуэлист", "Java-разработчик" };
+
     [SerializeField] private Keyboard keyboard;
 
     private void Start()
@@ -19,8 +23,9 @@ public class NicknameChoose : MonoBehaviour
 
     private void LoadNickname()
     {
+        // См. описание флага
         if (resetNicknameAfterRestart)
-        { // См. описание флага
+        {
             nickname = RandomNickname();
         }
         else if (PlayerPrefs.HasKey("Nickname"))
@@ -49,7 +54,6 @@ public class NicknameChoose : MonoBehaviour
 
     private string RandomNickname()
     {
-        string[] nicknameList = { "Инженер", "Конструктор", "Механик", "Помощник" };
         return nicknameList[Random.Range(0, nicknameList.Length)];
     }
 

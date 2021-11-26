@@ -30,8 +30,11 @@ public class MainMenuController : MonoBehaviour
 
         // yield return new WaitForSeconds(0.1f);
 
-        // Генерируем коллайдеры и отключаем объект.
-        // engine.SetActive(false);
+        // Hide objects before start.
+        foreach (var gObject in enableOnGameStart)
+        {
+            if (gObject) gObject.SetActive(false);
+        }
     }
     
     private void LateUpdate()
