@@ -24,7 +24,6 @@ public class Networking : MonoBehaviourPunCallbacks
 
     void Start()
     {
-        Debug.Log("9");
         PhotonNetwork.GameVersion = Version;
         PhotonNetwork.ConnectUsingSettings();
         roomListingMenu = FindObjectOfType<RoomListingsMenu>();
@@ -46,22 +45,25 @@ public class Networking : MonoBehaviourPunCallbacks
 
     public override void OnConnectedToMaster()
     {
+        Debug.Log("OnConnectedToMaster");
         JoinLobby();
     }
 
     private void JoinLobby()
     {
+        Debug.Log("JoinLobby");
         PhotonNetwork.JoinLobby();
     }
 
     public override void OnJoinRandomFailed(short returnCode, string message)
     {
+        Debug.Log("OnJoinRandomFailed");
         CreateRoom();
     }
 
     public void CreateRoom()
     {
-
+        Debug.Log("CreateRoom");
         string roomName = "Комната " + PlayerPrefs.GetString("Nickname");
 
         byte FreeSlots =

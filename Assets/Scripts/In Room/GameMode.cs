@@ -7,7 +7,7 @@ public class GameMode : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log(gameObject.name + "is active.");
+        Debug.Log(gameObject.name + " is active.");
     }
 
     public void UpdateHeader(string text)
