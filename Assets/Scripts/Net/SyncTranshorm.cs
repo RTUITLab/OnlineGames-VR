@@ -84,13 +84,7 @@ public class SyncTranshorm : MonoBehaviourPunCallbacks
         Part part = GetComponent<Part>();
         if (part)
         {
-            if (active)
-            {
-                part.DisplayHint();
-            } else
-            {
-                part.StopDisplaying();
-            }
+
         }
 
         cathed = active;

@@ -7,10 +7,10 @@ using UnityEngine.UI;
 public class GameModeSetup : MonoBehaviour
 {
     public GameModeSetup Instance;
-
     [SerializeField] private Text playersCountOutput;
-
     [SerializeField] private GameObject[] gameModes;
+    [SerializeField] private GameObject[] disableOnGameStart;
+
 
     private void Start()
     {
@@ -25,5 +25,8 @@ public class GameModeSetup : MonoBehaviour
     public void ChooseGameMode(int gameMode)
     {
         gameModes[gameMode].SetActive(true);
+
+        foreach (var d in disableOnGameStart)
+            d.SetActive(false);
     }
 }
