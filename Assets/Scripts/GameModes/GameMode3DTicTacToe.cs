@@ -66,10 +66,37 @@ public class GameMode3DTicTacToe : GameMode
         }
     }
 
-    private bool IsWinner(int playerId)
+    public void Place(int playerId, int x, int y, int z)
+    {
+        field[x, y, z] = playerId;
+
+        int winner = FindWinner();
+        if (winner != 0)
+        {
+            // TODO Continue playing.
+        } else
+        {
+            // TODO Player 1 or Player 2 won.
+        }
+    }
+
+    public int FindWinner()
     {
         ConvertToFlatFields();
 
+        bool player1 = IsWinner(1);
+        bool player2 = IsWinner(2);
+
+        if (player1)
+            return 1;
+        if (player2)
+            return 2;
+        else
+            return 0;
+    }
+
+    private bool IsWinner(int playerId)
+    {
         foreach (var flatField in flatFields)
         {
             for (int i = 0; i < 3; i++)
