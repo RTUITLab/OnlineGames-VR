@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class GameMode3DTicTacToe : GameMode
 {
-    private const int size = 3;
-    private int[,,] field = new int[size, size, size];
+    private int[,,] field = new int[3, 3, 3];
+    List<int[,]> flatFields = new List<int[,]>();
 
     private int step = 0;
     [SerializeField] private GameObject[] crosses;
@@ -26,34 +26,80 @@ public class GameMode3DTicTacToe : GameMode
         step++;
     }
 
+    private void ConvertToFlatFields()
+    {
+        flatFields = new List<int[,]>();
+
+        // 9 standard fields.
+        for (int i = 0; i < 3; i++)
+        {
+            flatFields.Add(new int[3, 3]);
+            flatFields.Add(new int[3, 3]);
+            flatFields.Add(new int[3, 3]);
+            for (int a = 0; a < 3; a++)
+            {
+                for (int b = 0; b < 3; b++)
+                {
+                    flatFields[3 * i][a, b] = field[a, b, i];
+                    flatFields[3 * i + 1][a, b] = field[a, i, b];
+                    flatFields[3 * i + 2][a, b] = field[i, a, b];
+                }
+            }
+        }
+
+        // 6 diagonal fields.
+        for (int i = 0; i < 6; i++)
+        {
+            flatFields.Add(new int[3, 3]);
+        }
+        for (int a = 0; a < 3; a++)
+        {
+            for (int b = 0; b < 3; b++)
+            {
+                flatFields[9][a, b] = field[a, a, b];
+                flatFields[10][a, b] = field[a, 2 - a, b];
+                flatFields[11][a, b] = field[a, b, a];
+                flatFields[12][a, b] = field[a, b, 2 - a];
+                flatFields[13][a, b] = field[a, b, a];
+                flatFields[14][a, b] = field[a, b, 2 - a];
+            }
+        }
+    }
+
     private bool IsWinner(int playerId)
     {
-        //for (int i = 0; i < size; i++)
-        //{
-        //    for (int j = 0; j < size; j++)
-        //    {
-        //        if (field[i, j, 0] == playerId &&
-        //            field[i, j, 1] == playerId &&
-        //            field[i, j, 2] == playerId)
-        //        {
-        //            return true;
-        //        }
+        ConvertToFlatFields();
 
-        //        if (field[i, 0, j] == playerId &&
-        //            field[i, 1, j] == playerId &&
-        //            field[i, 2, j] == playerId)
-        //        {
-        //            return true;
-        //        }
+        foreach (var flatField in flatFields)
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                // Check all rows.
+                if (flatField[i, 0] == playerId &&
+                    flatField[i, 1] == playerId &&
+                    flatField[i, 2] == playerId)
+                    return true;
 
-        //        if (field[0, i, j] == playerId &&
-        //            field[1, i, j] == playerId &&
-        //            field[2, i, j] == playerId)
-        //        {
-        //            return true;
-        //        }
-        //    }
-        //}
+                // Check all columns.
+                if (flatField[0, i] == playerId &&
+                    flatField[1, i] == playerId &&
+                    flatField[2, i] == playerId)
+                    return true;
+            }
+
+            // Check 1st diagonal.
+            if (flatField[0, 0] == playerId &&
+                flatField[1, 1] == playerId &&
+                flatField[2, 2] == playerId)
+                return true;
+
+            // Check 2nd diagonal.
+            if (flatField[0, 2] == playerId &&
+                flatField[1, 1] == playerId &&
+                flatField[2, 0] == playerId)
+                return true;
+        }
+
         return false;
     }
 }
