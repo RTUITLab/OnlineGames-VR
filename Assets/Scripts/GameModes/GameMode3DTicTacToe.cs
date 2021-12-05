@@ -5,8 +5,13 @@ using UnityEngine;
 
 public class GameMode3DTicTacToe : GameMode
 {
+    public static GameMode3DTicTacToe Instance;
+
     private int[,,] field = new int[3, 3, 3];
-    List<int[,]> flatFields = new List<int[,]>();
+    private List<int[,]> flatFields = new List<int[,]>();
+
+    [SerializeField] private GameObject partPlacesParent;
+    private PartPlace[] partPlaces;
 
     private int step = 0;
     [SerializeField] private GameObject[] crosses;
@@ -16,7 +21,26 @@ public class GameMode3DTicTacToe : GameMode
     {
         Debug.Log(gameObject.name + " is active.");
 
+        Instance = this;
+
+        partPlaces = partPlacesParent.GetComponentsInChildren<PartPlace>();
+
         NextStep();
+    }
+
+    public int GetPartId(PartPlace partPlace)
+    {
+        for (int i = 0; i < partPlaces.Length; i++)
+        {
+            if (partPlace.transform.position == partPlaces[i].transform.position)
+                return i;
+        }
+        return 0;
+    }
+
+    public PartPlace GetPartPlace(int id)
+    {
+        return partPlaces[id];
     }
 
     public void NextStep()

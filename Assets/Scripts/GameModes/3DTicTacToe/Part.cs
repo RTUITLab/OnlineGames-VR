@@ -8,19 +8,20 @@ public class Part : MonoBehaviour
 {
     public int PlayerId;
     private List<PartPlace> insidePlaces = new List<PartPlace>();
-    private Throwable throwable;
 
-
+    private PhotonView photonView;
     private void Start()
     {
-        throwable = GetComponent<Throwable>();
-        throwable.onDetachFromHand.AddListener(OnDetachFromHand);
+        photonView = GetComponent<PhotonView>();
+        GetComponent<InteractableHoverEvents>().onDetachedFromHand.AddListener(OnDetachFromHand);
     }
 
     public void OnDetachFromHand()
     {
+        Debug.Log("OnDetachFromHand, " + insidePlaces.Count);
         if (insidePlaces.Count == 0)
             return;
+        Debug.Log("OnDetachFromHand execute");
 
         // Find nearest place.
         PartPlace nearestPlace = insidePlaces[0];
@@ -33,8 +34,25 @@ public class Part : MonoBehaviour
             }
         }
 
+        Debug.Log(nearestPlace.transform.localPosition);
+
         // Place inside of it.
-        nearestPlace.Place(PlayerId);
+        Place(GameMode3DTicTacToe.Instance.GetPartId(nearestPlace));
+    }
+
+    private void Place(int partPlaceId)
+    {
+        Debug.Log("Part");
+        photonView.RPC("PlacePart", RpcTarget.All, partPlaceId);
+    }
+
+    [PunRPC]
+    private void PlacePart(int partPlaceId)
+    {
+        Debug.Log("PlacePart");
+        GameMode3DTicTacToe.Instance.GetPartPlace(partPlaceId).Place(PlayerId);
+
+        gameObject.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -44,6 +62,7 @@ public class Part : MonoBehaviour
         {
             insidePlaces.Add(place);
         }
+        Debug.Log("OnTriggerEnter " + insidePlaces.Count);
     }
 
     private void OnTriggerExit(Collider other)
@@ -53,5 +72,6 @@ public class Part : MonoBehaviour
         {
             insidePlaces.Remove(place);
         }
+        Debug.Log("OnTriggerExit " + insidePlaces.Count);
     }
 }
