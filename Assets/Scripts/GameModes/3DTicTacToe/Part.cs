@@ -8,12 +8,14 @@ public class Part : MonoBehaviour
 {
     public int PlayerId;
     private List<PartPlace> insidePlaces = new List<PartPlace>();
-
     private PhotonView photonView;
+
     private void Start()
     {
         photonView = GetComponent<PhotonView>();
         GetComponent<InteractableHoverEvents>().onDetachedFromHand.AddListener(OnDetachFromHand);
+
+        PhotonNetwork.AllocateViewID(photonView);
     }
 
     public void OnDetachFromHand()

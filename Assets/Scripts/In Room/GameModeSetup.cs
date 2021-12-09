@@ -6,15 +6,15 @@ using UnityEngine.UI;
 
 public class GameModeSetup : MonoBehaviour
 {
-    public GameModeSetup Instance;
+    [HideInInspector] public GameModeSetup Instance;
     [SerializeField] private Text playersCountOutput;
     [SerializeField] private GameObject[] gameModes;
-    [SerializeField] private GameObject[] disableOnGameStart;
-
+    private PhotonView photonView;
 
     private void Start()
     {
         Instance = this;
+        photonView = GetComponent<PhotonView>();
     }
 
     public void UpdatePlayersCount()
@@ -24,9 +24,14 @@ public class GameModeSetup : MonoBehaviour
 
     public void ChooseGameMode(int gameMode)
     {
-        gameModes[gameMode].SetActive(true);
+        photonView.RPC("chooseGameMode", RpcTarget.AllViaServer, gameMode);
+    }
 
-        foreach (var d in disableOnGameStart)
-            d.SetActive(false);
+    [PunRPC]
+    public void chooseGameMode(int gameMode)
+    {
+        Instantiate(gameModes[gameMode]);
+
+        Destroy(transform.parent.gameObject);
     }
 }
