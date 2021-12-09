@@ -25,7 +25,7 @@ public class GameMode3DTicTacToe : GameMode
 
         partPlaces = partPlacesParent.GetComponentsInChildren<PartPlace>();
 
-        NextStep();
+        NextStep(2);
     }
 
     public int GetPartId(PartPlace partPlace)
@@ -43,10 +43,13 @@ public class GameMode3DTicTacToe : GameMode
         return partPlaces[id];
     }
 
-    public void NextStep()
+    public void NextStep(int playerId)
     {
-        crosses[step].SetActive(true);
-        circles[step].SetActive(true);
+        if (playerId == 1) // Cross, next Circle.
+            circles[step / 2].SetActive(true);
+        else
+            crosses[step / 2].SetActive(true);
+
         step++;
     }
 
@@ -95,11 +98,12 @@ public class GameMode3DTicTacToe : GameMode
         field[x, y, z] = playerId;
 
         int winner = FindWinner();
-        if (winner != 0)
+        if (winner == 0)
         {
-            // TODO Continue playing.
+            NextStep(playerId);
         } else
         {
+            Debug.Log("WINNER: " + winner);
             // TODO Player 1 or Player 2 won.
         }
     }
