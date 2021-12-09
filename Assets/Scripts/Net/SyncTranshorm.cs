@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
-
 using Valve.VR.InteractionSystem;
 using UnityEngine.UI;
 using TMPro;
@@ -81,12 +80,6 @@ public class SyncTranshorm : MonoBehaviourPunCallbacks
 
     public void CatchObj(bool active) //Вызывается когда игрок схватил или отпустил предмет.
     {
-        Part part = GetComponent<Part>();
-        if (part)
-        {
-
-        }
-
         cathed = active;
         photonView.RPC("Interactable", RpcTarget.OthersBuffered, active);
         if (active)
