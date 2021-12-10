@@ -182,7 +182,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8187376903819830391
 Transform:
   m_ObjectHideFlags: 0
@@ -296,9 +296,9 @@ MonoBehaviour:
   attachmentOffset: {fileID: 0}
   catchingSpeedThreshold: -1
   releaseVelocityStyle: 1
-  releaseVelocityTimeOffset: -0.011
-  scaleReleaseVelocity: 1.1
-  scaleReleaseVelocityThreshold: -1
+  releaseVelocityTimeOffset: -0.1
+  scaleReleaseVelocity: 0.8
+  scaleReleaseVelocityThreshold: 1
   scaleReleaseVelocityCurve:
     serializedVersion: 2
     m_Curve:
@@ -404,7 +404,7 @@ MonoBehaviour:
   snapAttachEaseInTime: 0.15
   snapAttachEaseInCompleted: 0
   skeletonPoser: {fileID: 0}
-  handFollowTransform: 1
+  handFollowTransform: 0
   highlightOnHover: 0
   hideHighlight: []
   hoverPriority: 0

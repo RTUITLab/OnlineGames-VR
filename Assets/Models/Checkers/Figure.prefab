@@ -235,7 +235,7 @@ MonoBehaviour:
   snapAttachEaseInTime: 0.15
   snapAttachEaseInCompleted: 0
   skeletonPoser: {fileID: 0}
-  handFollowTransform: 1
+  handFollowTransform: 0
   highlightOnHover: 0
   hideHighlight: []
   hoverPriority: 0
@@ -279,9 +279,9 @@ MonoBehaviour:
   attachmentOffset: {fileID: 0}
   catchingSpeedThreshold: -1
   releaseVelocityStyle: 1
-  releaseVelocityTimeOffset: -0.011
-  scaleReleaseVelocity: 1.1
-  scaleReleaseVelocityThreshold: -1
+  releaseVelocityTimeOffset: -0.1
+  scaleReleaseVelocity: 0.8
+  scaleReleaseVelocityThreshold: 1
   scaleReleaseVelocityCurve:
     serializedVersion: 2
     m_Curve:

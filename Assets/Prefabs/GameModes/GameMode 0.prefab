@@ -7839,21 +7839,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4161651909832827434, guid: b668d5a5c02b15d458fe50cf95c5003d,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.1458
-      objectReference: {fileID: 0}
-    - target: {fileID: 4161651909832827434, guid: b668d5a5c02b15d458fe50cf95c5003d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.135
-      objectReference: {fileID: 0}
-    - target: {fileID: 4161651909832827434, guid: b668d5a5c02b15d458fe50cf95c5003d,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.1458
-      objectReference: {fileID: 0}
-    - target: {fileID: 4161651909832827434, guid: b668d5a5c02b15d458fe50cf95c5003d,
-        type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.475
       objectReference: {fileID: 0}
@@ -7902,60 +7887,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5095122193239161618, guid: b668d5a5c02b15d458fe50cf95c5003d,
-        type: 3}
-      propertyPath: viewIdField
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5095122193239161621, guid: b668d5a5c02b15d458fe50cf95c5003d,
-        type: 3}
-      propertyPath: highlightOnHover
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5095122193239161622, guid: b668d5a5c02b15d458fe50cf95c5003d,
-        type: 3}
-      propertyPath: onDetachedFromHand.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5095122193239161622, guid: b668d5a5c02b15d458fe50cf95c5003d,
-        type: 3}
-      propertyPath: onDetachedFromHand.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5095122193239161622, guid: b668d5a5c02b15d458fe50cf95c5003d,
-        type: 3}
-      propertyPath: onDetachedFromHand.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 4227983465384857529}
-    - target: {fileID: 5095122193239161622, guid: b668d5a5c02b15d458fe50cf95c5003d,
-        type: 3}
-      propertyPath: onDetachedFromHand.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5095122193239161622, guid: b668d5a5c02b15d458fe50cf95c5003d,
-        type: 3}
-      propertyPath: onDetachedFromHand.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnDetachFromHand
-      objectReference: {fileID: 0}
-    - target: {fileID: 5095122193239161622, guid: b668d5a5c02b15d458fe50cf95c5003d,
-        type: 3}
-      propertyPath: onDetachedFromHand.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 5095122193239161623, guid: b668d5a5c02b15d458fe50cf95c5003d,
-        type: 3}
-      propertyPath: PlayerId
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 6685329659467384080, guid: b668d5a5c02b15d458fe50cf95c5003d,
         type: 3}
       propertyPath: m_Name
       value: Circle (9)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6685329659467384080, guid: b668d5a5c02b15d458fe50cf95c5003d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b668d5a5c02b15d458fe50cf95c5003d, type: 3}
@@ -8031,11 +7966,6 @@ PrefabInstance:
     - target: {fileID: 4161651909832827434, guid: b668d5a5c02b15d458fe50cf95c5003d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5095122193239161618, guid: b668d5a5c02b15d458fe50cf95c5003d,
-        type: 3}
-      propertyPath: viewIdField
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6685329659467384080, guid: b668d5a5c02b15d458fe50cf95c5003d,
@@ -10716,80 +10646,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3767012164181545443}
     m_Modifications:
-    - target: {fileID: 1075178426403862224, guid: 79d86a4fef18b3845a780970916950ec,
-        type: 3}
-      propertyPath: onDetachedFromHand.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1075178426403862224, guid: 79d86a4fef18b3845a780970916950ec,
-        type: 3}
-      propertyPath: onDetachedFromHand.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1075178426403862224, guid: 79d86a4fef18b3845a780970916950ec,
-        type: 3}
-      propertyPath: onDetachedFromHand.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 4227983465384857529}
-    - target: {fileID: 1075178426403862224, guid: 79d86a4fef18b3845a780970916950ec,
-        type: 3}
-      propertyPath: onDetachedFromHand.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1075178426403862224, guid: 79d86a4fef18b3845a780970916950ec,
-        type: 3}
-      propertyPath: onDetachedFromHand.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnDetachFromHand
-      objectReference: {fileID: 0}
-    - target: {fileID: 1075178426403862224, guid: 79d86a4fef18b3845a780970916950ec,
-        type: 3}
-      propertyPath: onDetachedFromHand.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 1075178426403862227, guid: 79d86a4fef18b3845a780970916950ec,
-        type: 3}
-      propertyPath: PlayerId
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1075178426403862236, guid: 79d86a4fef18b3845a780970916950ec,
-        type: 3}
-      propertyPath: viewIdField
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1075178426403862237, guid: 79d86a4fef18b3845a780970916950ec,
-        type: 3}
-      propertyPath: highlightOnHover
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1484288269518472013, guid: 79d86a4fef18b3845a780970916950ec,
         type: 3}
       propertyPath: m_Name
       value: Cross (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 1484288269518472013, guid: 79d86a4fef18b3845a780970916950ec,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8187376903819830391, guid: 79d86a4fef18b3845a780970916950ec,
         type: 3}
       propertyPath: m_RootOrder
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8187376903819830391, guid: 79d86a4fef18b3845a780970916950ec,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.18
-      objectReference: {fileID: 0}
-    - target: {fileID: 8187376903819830391, guid: 79d86a4fef18b3845a780970916950ec,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.18
-      objectReference: {fileID: 0}
-    - target: {fileID: 8187376903819830391, guid: 79d86a4fef18b3845a780970916950ec,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: 8187376903819830391, guid: 79d86a4fef18b3845a780970916950ec,
         type: 3}
@@ -11604,20 +11469,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3767012164181545443}
     m_Modifications:
-    - target: {fileID: 1075178426403862236, guid: 79d86a4fef18b3845a780970916950ec,
-        type: 3}
-      propertyPath: viewIdField
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1075178426403862236, guid: 79d86a4fef18b3845a780970916950ec,
-        type: 3}
-      propertyPath: OwnershipTransfer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1484288269518472013, guid: 79d86a4fef18b3845a780970916950ec,
         type: 3}
       propertyPath: m_Name
       value: Cross (0)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1484288269518472013, guid: 79d86a4fef18b3845a780970916950ec,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8187376903819830391, guid: 79d86a4fef18b3845a780970916950ec,
         type: 3}
