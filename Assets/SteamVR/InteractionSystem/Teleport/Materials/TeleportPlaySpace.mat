@@ -10,7 +10,7 @@ Material:
   m_Name: TeleportPlaySpace
   m_Shader: {fileID: -6465566751694194690, guid: 4611cbc6f31a25a49a18e0fce36e607e,
     type: 3}
-  m_ShaderKeywords: S_SPECULAR_NONE S_UNLIT _ALPHABLEND_ON
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA S_SPECULAR_NONE S_UNLIT _ALPHABLEND_ON
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
