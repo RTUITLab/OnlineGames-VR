@@ -1,12 +1,15 @@
 ### Description
 
-![TicTacToe](https://user-images.githubusercontent.com/46666053/145466448-18ca000d-fbad-4957-b398-e4342d7a91d5.png)
+3D Tic-Tac-Toe | Simple Checkers
+:-------------------------:|:-------------------------:
+![](https://user-images.githubusercontent.com/46666053/145612405-ceecbda2-06eb-4c1b-ab0b-3dd03fe51fa7.png)  |  ![](https://user-images.githubusercontent.com/46666053/145612399-1ab6a7a0-6896-4b45-b2f1-368e99f2f270.png)
 
 // TODO
 
 ## Controls
 
 `CTRL`+`R` to restart the game
+
 `C` key to show/hide dev console 
 
 ## Development
