@@ -30,7 +30,7 @@ public class GameModeSetup : MonoBehaviour
     [PunRPC]
     public void chooseGameMode(int gameMode)
     {
-        Instantiate(gameModes[gameMode]);
+        gameModes[gameMode].SetActive(true);
 
         Destroy(transform.parent.gameObject);
     }
