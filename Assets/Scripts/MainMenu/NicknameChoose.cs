@@ -9,9 +9,7 @@ public class NicknameChoose : MonoBehaviour
     [SerializeField] private bool resetNicknameAfterRestart = true;
     private string nickname;
 
-    private string[] nicknameList = { "Умный король", "Бедный студент", "Олег Олегович",
-        "Крестик Ноликович", "X Æ A-12", "Просто робот", "Профессионал", "Любитель фанты",
-        "Клавиатурный герой", "Лучший дуэлист", "Java-разработчик" };
+    [SerializeField] private string[] nicknameList;
 
     [SerializeField] private Keyboard keyboard;
 
