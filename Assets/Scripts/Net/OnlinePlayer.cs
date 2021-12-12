@@ -51,10 +51,12 @@ public class OnlinePlayer : MonoBehaviour
     }
 
     [PunRPC]
-    private void sendNickname(string nickname)
+    private void sendNickname(string nickname) // Player connected
     {
         nicknameOutput.text = nickname;
         Debug.Log("Send Nickname executed: nickname - " + nickname);
+
+        GameModeSetup.Instance.UpdatePlayersCount();
     }
 
     public void SendMovementDirection(Vector2 dir)

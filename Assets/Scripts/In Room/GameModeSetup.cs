@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class GameModeSetup : MonoBehaviour
 {
-    [HideInInspector] public GameModeSetup Instance;
+    [HideInInspector] public static GameModeSetup Instance;
     [SerializeField] private Text playersCountOutput;
     [SerializeField] private GameObject[] gameModes;
     private PhotonView photonView;
