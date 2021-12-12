@@ -7887,6 +7887,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5095122193239161620, guid: b668d5a5c02b15d458fe50cf95c5003d,
+        type: 3}
+      propertyPath: attachmentFlags
+      value: 84
+      objectReference: {fileID: 0}
+    - target: {fileID: 5095122193239161620, guid: b668d5a5c02b15d458fe50cf95c5003d,
+        type: 3}
+      propertyPath: releaseVelocityStyle
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6685329659467384080, guid: b668d5a5c02b15d458fe50cf95c5003d,
         type: 3}
       propertyPath: m_Name
@@ -7967,6 +7977,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5095122193239161620, guid: b668d5a5c02b15d458fe50cf95c5003d,
+        type: 3}
+      propertyPath: attachmentFlags
+      value: 84
+      objectReference: {fileID: 0}
+    - target: {fileID: 5095122193239161620, guid: b668d5a5c02b15d458fe50cf95c5003d,
+        type: 3}
+      propertyPath: releaseVelocityStyle
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6685329659467384080, guid: b668d5a5c02b15d458fe50cf95c5003d,
         type: 3}
@@ -8069,6 +8089,16 @@ PrefabInstance:
       propertyPath: viewIdField
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5095122193239161620, guid: b668d5a5c02b15d458fe50cf95c5003d,
+        type: 3}
+      propertyPath: attachmentFlags
+      value: 84
+      objectReference: {fileID: 0}
+    - target: {fileID: 5095122193239161620, guid: b668d5a5c02b15d458fe50cf95c5003d,
+        type: 3}
+      propertyPath: releaseVelocityStyle
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5095122193239161621, guid: b668d5a5c02b15d458fe50cf95c5003d,
         type: 3}
       propertyPath: highlightOnHover
@@ -8169,6 +8199,16 @@ PrefabInstance:
         type: 3}
       propertyPath: onDetachedFromHand.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1075178426403862226, guid: 79d86a4fef18b3845a780970916950ec,
+        type: 3}
+      propertyPath: attachmentFlags
+      value: 84
+      objectReference: {fileID: 0}
+    - target: {fileID: 1075178426403862226, guid: 79d86a4fef18b3845a780970916950ec,
+        type: 3}
+      propertyPath: releaseVelocityStyle
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1075178426403862227, guid: 79d86a4fef18b3845a780970916950ec,
         type: 3}
@@ -8327,6 +8367,16 @@ PrefabInstance:
         type: 3}
       propertyPath: onDetachedFromHand.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1075178426403862226, guid: 79d86a4fef18b3845a780970916950ec,
+        type: 3}
+      propertyPath: attachmentFlags
+      value: 84
+      objectReference: {fileID: 0}
+    - target: {fileID: 1075178426403862226, guid: 79d86a4fef18b3845a780970916950ec,
+        type: 3}
+      propertyPath: releaseVelocityStyle
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1075178426403862227, guid: 79d86a4fef18b3845a780970916950ec,
         type: 3}
@@ -8519,6 +8569,16 @@ PrefabInstance:
       propertyPath: viewIdField
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5095122193239161620, guid: b668d5a5c02b15d458fe50cf95c5003d,
+        type: 3}
+      propertyPath: attachmentFlags
+      value: 84
+      objectReference: {fileID: 0}
+    - target: {fileID: 5095122193239161620, guid: b668d5a5c02b15d458fe50cf95c5003d,
+        type: 3}
+      propertyPath: releaseVelocityStyle
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5095122193239161621, guid: b668d5a5c02b15d458fe50cf95c5003d,
         type: 3}
       propertyPath: highlightOnHover
@@ -8619,6 +8679,16 @@ PrefabInstance:
         type: 3}
       propertyPath: onDetachedFromHand.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1075178426403862226, guid: 79d86a4fef18b3845a780970916950ec,
+        type: 3}
+      propertyPath: attachmentFlags
+      value: 84
+      objectReference: {fileID: 0}
+    - target: {fileID: 1075178426403862226, guid: 79d86a4fef18b3845a780970916950ec,
+        type: 3}
+      propertyPath: releaseVelocityStyle
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1075178426403862227, guid: 79d86a4fef18b3845a780970916950ec,
         type: 3}
@@ -8811,6 +8881,16 @@ PrefabInstance:
       propertyPath: viewIdField
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5095122193239161620, guid: b668d5a5c02b15d458fe50cf95c5003d,
+        type: 3}
+      propertyPath: attachmentFlags
+      value: 84
+      objectReference: {fileID: 0}
+    - target: {fileID: 5095122193239161620, guid: b668d5a5c02b15d458fe50cf95c5003d,
+        type: 3}
+      propertyPath: releaseVelocityStyle
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5095122193239161621, guid: b668d5a5c02b15d458fe50cf95c5003d,
         type: 3}
       propertyPath: highlightOnHover
@@ -8911,6 +8991,16 @@ PrefabInstance:
         type: 3}
       propertyPath: onDetachedFromHand.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1075178426403862226, guid: 79d86a4fef18b3845a780970916950ec,
+        type: 3}
+      propertyPath: attachmentFlags
+      value: 84
+      objectReference: {fileID: 0}
+    - target: {fileID: 1075178426403862226, guid: 79d86a4fef18b3845a780970916950ec,
+        type: 3}
+      propertyPath: releaseVelocityStyle
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1075178426403862227, guid: 79d86a4fef18b3845a780970916950ec,
         type: 3}
@@ -9068,11 +9158,6 @@ PrefabInstance:
       propertyPath: viewIdField
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1075178426403862237, guid: 79d86a4fef18b3845a780970916950ec,
-        type: 3}
-      propertyPath: highlightOnHover
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1484288269518472013, guid: 79d86a4fef18b3845a780970916950ec,
         type: 3}
       propertyPath: m_Name
@@ -9203,6 +9288,16 @@ PrefabInstance:
         type: 3}
       propertyPath: onDetachedFromHand.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1075178426403862226, guid: 79d86a4fef18b3845a780970916950ec,
+        type: 3}
+      propertyPath: attachmentFlags
+      value: 84
+      objectReference: {fileID: 0}
+    - target: {fileID: 1075178426403862226, guid: 79d86a4fef18b3845a780970916950ec,
+        type: 3}
+      propertyPath: releaseVelocityStyle
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1075178426403862227, guid: 79d86a4fef18b3845a780970916950ec,
         type: 3}
@@ -9395,6 +9490,16 @@ PrefabInstance:
       propertyPath: viewIdField
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5095122193239161620, guid: b668d5a5c02b15d458fe50cf95c5003d,
+        type: 3}
+      propertyPath: attachmentFlags
+      value: 84
+      objectReference: {fileID: 0}
+    - target: {fileID: 5095122193239161620, guid: b668d5a5c02b15d458fe50cf95c5003d,
+        type: 3}
+      propertyPath: releaseVelocityStyle
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5095122193239161621, guid: b668d5a5c02b15d458fe50cf95c5003d,
         type: 3}
       propertyPath: highlightOnHover
@@ -9540,6 +9645,16 @@ PrefabInstance:
         type: 3}
       propertyPath: viewIdField
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5095122193239161620, guid: b668d5a5c02b15d458fe50cf95c5003d,
+        type: 3}
+      propertyPath: attachmentFlags
+      value: 84
+      objectReference: {fileID: 0}
+    - target: {fileID: 5095122193239161620, guid: b668d5a5c02b15d458fe50cf95c5003d,
+        type: 3}
+      propertyPath: releaseVelocityStyle
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5095122193239161621, guid: b668d5a5c02b15d458fe50cf95c5003d,
         type: 3}
@@ -9687,6 +9802,16 @@ PrefabInstance:
       propertyPath: viewIdField
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5095122193239161620, guid: b668d5a5c02b15d458fe50cf95c5003d,
+        type: 3}
+      propertyPath: attachmentFlags
+      value: 84
+      objectReference: {fileID: 0}
+    - target: {fileID: 5095122193239161620, guid: b668d5a5c02b15d458fe50cf95c5003d,
+        type: 3}
+      propertyPath: releaseVelocityStyle
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5095122193239161621, guid: b668d5a5c02b15d458fe50cf95c5003d,
         type: 3}
       propertyPath: highlightOnHover
@@ -9832,6 +9957,16 @@ PrefabInstance:
         type: 3}
       propertyPath: viewIdField
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5095122193239161620, guid: b668d5a5c02b15d458fe50cf95c5003d,
+        type: 3}
+      propertyPath: attachmentFlags
+      value: 84
+      objectReference: {fileID: 0}
+    - target: {fileID: 5095122193239161620, guid: b668d5a5c02b15d458fe50cf95c5003d,
+        type: 3}
+      propertyPath: releaseVelocityStyle
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5095122193239161621, guid: b668d5a5c02b15d458fe50cf95c5003d,
         type: 3}
@@ -9979,16 +10114,6 @@ PrefabInstance:
       propertyPath: viewIdField
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5095122193239161621, guid: b668d5a5c02b15d458fe50cf95c5003d,
-        type: 3}
-      propertyPath: highlightOnHover
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5095122193239161622, guid: b668d5a5c02b15d458fe50cf95c5003d,
-        type: 3}
-      propertyPath: onDetachedFromHand.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5095122193239161622, guid: b668d5a5c02b15d458fe50cf95c5003d,
         type: 3}
       propertyPath: onDetachedFromHand.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -10079,6 +10204,16 @@ PrefabInstance:
         type: 3}
       propertyPath: onDetachedFromHand.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1075178426403862226, guid: 79d86a4fef18b3845a780970916950ec,
+        type: 3}
+      propertyPath: attachmentFlags
+      value: 84
+      objectReference: {fileID: 0}
+    - target: {fileID: 1075178426403862226, guid: 79d86a4fef18b3845a780970916950ec,
+        type: 3}
+      propertyPath: releaseVelocityStyle
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1075178426403862227, guid: 79d86a4fef18b3845a780970916950ec,
         type: 3}
@@ -10225,6 +10360,16 @@ PrefabInstance:
         type: 3}
       propertyPath: onDetachedFromHand.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1075178426403862226, guid: 79d86a4fef18b3845a780970916950ec,
+        type: 3}
+      propertyPath: attachmentFlags
+      value: 84
+      objectReference: {fileID: 0}
+    - target: {fileID: 1075178426403862226, guid: 79d86a4fef18b3845a780970916950ec,
+        type: 3}
+      propertyPath: releaseVelocityStyle
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1075178426403862227, guid: 79d86a4fef18b3845a780970916950ec,
         type: 3}
@@ -10429,6 +10574,16 @@ PrefabInstance:
       propertyPath: viewIdField
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5095122193239161620, guid: b668d5a5c02b15d458fe50cf95c5003d,
+        type: 3}
+      propertyPath: attachmentFlags
+      value: 84
+      objectReference: {fileID: 0}
+    - target: {fileID: 5095122193239161620, guid: b668d5a5c02b15d458fe50cf95c5003d,
+        type: 3}
+      propertyPath: releaseVelocityStyle
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5095122193239161621, guid: b668d5a5c02b15d458fe50cf95c5003d,
         type: 3}
       propertyPath: highlightOnHover
@@ -10529,6 +10684,16 @@ PrefabInstance:
         type: 3}
       propertyPath: onDetachedFromHand.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1075178426403862226, guid: 79d86a4fef18b3845a780970916950ec,
+        type: 3}
+      propertyPath: attachmentFlags
+      value: 84
+      objectReference: {fileID: 0}
+    - target: {fileID: 1075178426403862226, guid: 79d86a4fef18b3845a780970916950ec,
+        type: 3}
+      propertyPath: releaseVelocityStyle
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1075178426403862227, guid: 79d86a4fef18b3845a780970916950ec,
         type: 3}
@@ -10646,6 +10811,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3767012164181545443}
     m_Modifications:
+    - target: {fileID: 1075178426403862226, guid: 79d86a4fef18b3845a780970916950ec,
+        type: 3}
+      propertyPath: attachmentFlags
+      value: 84
+      objectReference: {fileID: 0}
+    - target: {fileID: 1075178426403862226, guid: 79d86a4fef18b3845a780970916950ec,
+        type: 3}
+      propertyPath: releaseVelocityStyle
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1484288269518472013, guid: 79d86a4fef18b3845a780970916950ec,
         type: 3}
       propertyPath: m_Name
@@ -10756,6 +10931,16 @@ PrefabInstance:
         type: 3}
       propertyPath: onDetachedFromHand.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1075178426403862226, guid: 79d86a4fef18b3845a780970916950ec,
+        type: 3}
+      propertyPath: attachmentFlags
+      value: 84
+      objectReference: {fileID: 0}
+    - target: {fileID: 1075178426403862226, guid: 79d86a4fef18b3845a780970916950ec,
+        type: 3}
+      propertyPath: releaseVelocityStyle
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1075178426403862227, guid: 79d86a4fef18b3845a780970916950ec,
         type: 3}
@@ -10902,6 +11087,16 @@ PrefabInstance:
         type: 3}
       propertyPath: onDetachedFromHand.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1075178426403862226, guid: 79d86a4fef18b3845a780970916950ec,
+        type: 3}
+      propertyPath: attachmentFlags
+      value: 84
+      objectReference: {fileID: 0}
+    - target: {fileID: 1075178426403862226, guid: 79d86a4fef18b3845a780970916950ec,
+        type: 3}
+      propertyPath: releaseVelocityStyle
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1075178426403862227, guid: 79d86a4fef18b3845a780970916950ec,
         type: 3}
@@ -11094,6 +11289,16 @@ PrefabInstance:
       propertyPath: viewIdField
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5095122193239161620, guid: b668d5a5c02b15d458fe50cf95c5003d,
+        type: 3}
+      propertyPath: attachmentFlags
+      value: 84
+      objectReference: {fileID: 0}
+    - target: {fileID: 5095122193239161620, guid: b668d5a5c02b15d458fe50cf95c5003d,
+        type: 3}
+      propertyPath: releaseVelocityStyle
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5095122193239161621, guid: b668d5a5c02b15d458fe50cf95c5003d,
         type: 3}
       propertyPath: highlightOnHover
@@ -11194,6 +11399,16 @@ PrefabInstance:
         type: 3}
       propertyPath: onDetachedFromHand.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1075178426403862226, guid: 79d86a4fef18b3845a780970916950ec,
+        type: 3}
+      propertyPath: attachmentFlags
+      value: 84
+      objectReference: {fileID: 0}
+    - target: {fileID: 1075178426403862226, guid: 79d86a4fef18b3845a780970916950ec,
+        type: 3}
+      propertyPath: releaseVelocityStyle
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1075178426403862227, guid: 79d86a4fef18b3845a780970916950ec,
         type: 3}
@@ -11398,6 +11613,16 @@ PrefabInstance:
       propertyPath: viewIdField
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5095122193239161620, guid: b668d5a5c02b15d458fe50cf95c5003d,
+        type: 3}
+      propertyPath: attachmentFlags
+      value: 84
+      objectReference: {fileID: 0}
+    - target: {fileID: 5095122193239161620, guid: b668d5a5c02b15d458fe50cf95c5003d,
+        type: 3}
+      propertyPath: releaseVelocityStyle
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5095122193239161621, guid: b668d5a5c02b15d458fe50cf95c5003d,
         type: 3}
       propertyPath: highlightOnHover
@@ -11469,6 +11694,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3767012164181545443}
     m_Modifications:
+    - target: {fileID: 1075178426403862226, guid: 79d86a4fef18b3845a780970916950ec,
+        type: 3}
+      propertyPath: attachmentFlags
+      value: 84
+      objectReference: {fileID: 0}
+    - target: {fileID: 1075178426403862226, guid: 79d86a4fef18b3845a780970916950ec,
+        type: 3}
+      propertyPath: releaseVelocityStyle
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1484288269518472013, guid: 79d86a4fef18b3845a780970916950ec,
         type: 3}
       propertyPath: m_Name
@@ -11629,6 +11864,16 @@ PrefabInstance:
         type: 3}
       propertyPath: viewIdField
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5095122193239161620, guid: b668d5a5c02b15d458fe50cf95c5003d,
+        type: 3}
+      propertyPath: attachmentFlags
+      value: 84
+      objectReference: {fileID: 0}
+    - target: {fileID: 5095122193239161620, guid: b668d5a5c02b15d458fe50cf95c5003d,
+        type: 3}
+      propertyPath: releaseVelocityStyle
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5095122193239161621, guid: b668d5a5c02b15d458fe50cf95c5003d,
         type: 3}
