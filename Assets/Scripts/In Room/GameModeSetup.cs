@@ -17,9 +17,14 @@ public class GameModeSetup : MonoBehaviour
         photonView = GetComponent<PhotonView>();
     }
 
+    private int GetPlayerCount()
+    {
+        return FindObjectsOfType<OnlinePlayer>().Length;
+    }
+
     public void UpdatePlayersCount()
     {
-        playersCountOutput.text = $"Игроков в комнате {PhotonNetwork.PlayerList.Length} из {2}";
+        playersCountOutput.text = $"Игроков в комнате {GetPlayerCount()} из {2}";
     }
 
     public void ChooseGameMode(int gameMode)
