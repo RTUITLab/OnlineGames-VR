@@ -11,6 +11,7 @@ public class LocomotionConstant : MonoBehaviour
     [SerializeField] private Animator animator;
     SteamVR_Action_Boolean snapRightAction = SteamVR_Input.GetBooleanAction("SnapTurnRight");
     SteamVR_Action_Boolean snapLeftAction = SteamVR_Input.GetBooleanAction("SnapTurnLeft");
+    SteamVR_Action_Boolean restartAction = SteamVR_Input.GetBooleanAction("Restart");
 
     [SerializeField] SteamVR_Input_Sources Locomition_source;
 
@@ -47,7 +48,6 @@ public class LocomotionConstant : MonoBehaviour
         if (snapLeftAction.GetLastStateDown(SteamVR_Input_Sources.RightHand))
         {
             transform.Rotate(transform.up, -Rotating_angle);
-
         }
     }
 
@@ -104,6 +104,11 @@ public class LocomotionConstant : MonoBehaviour
 
     private void Update()
     {
+        if (restartAction.GetLastStateDown(SteamVR_Input_Sources.Any))
+        {
+            GlobalControls.Instance.RestartApp();
+        }
+
         CalculateRotation();
         CalculateMovement();
     }

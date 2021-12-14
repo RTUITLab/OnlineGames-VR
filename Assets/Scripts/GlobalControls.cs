@@ -6,6 +6,12 @@ public class GlobalControls : MonoBehaviour
 {
     private bool restartShortcut;
     private bool displayDevConsole = false;
+    public static GlobalControls Instance;
+
+    private void Start()
+    {
+        Instance = this;
+    }
 
     private void Update()
     {

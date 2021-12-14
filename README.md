@@ -7,10 +7,10 @@
 // TODO
 
 ## Controls
+ 
+Use `R` key to restart this application
 
-`CTRL`+`R` to restart the game
-
-`C` key to show/hide dev console 
+Use `C` key to show/hide dev console 
 
 ## Development
 
