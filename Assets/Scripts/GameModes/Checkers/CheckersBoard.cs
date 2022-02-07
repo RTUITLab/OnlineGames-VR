@@ -11,44 +11,24 @@ public class CheckersBoard : MonoBehaviour
     public Piece[,] Board;
     public Piece SelectedPawn;
 
-
-    private Vector3 boardOffset = new Vector3(-4f, 0, -4f);
-    private Vector3 pieceOffset = new Vector3(0.5f, 0, 0.5f);
-
-    public GameObject WhitePiecePrefab;
-    public GameObject BlackPiecePrefab;
-    public GameObject WhiteKingPrefab;
-    public GameObject BlackKingPrefab;
-    public GameObject InvisiblePiecePrefab;
-
-    public Camera WhiteCamera;
-    public Camera BlackCamera;
-
-    public Material whitePieceMaterial;
-    public Material blackPieceMaterial;
-    public Material chosenPieceMaterial;
-    public Material sideBlackPieceMaterial;
-    public Material sideWhitePieceMaterial;
-
-    public AudioSource skipPieceSound;
-    public AudioSource movePieceSound;
-
-    Game CheckersGame;
+    private Game CheckersGame;
 
     private List<GameObject> possibleMoves;
     private bool noAI = false;
 
+    [SerializeField] private Material whitePieceMaterial;
+    [SerializeField] private Material blackPieceMaterial;
+    [SerializeField] private Material chosenPieceMaterial;
+
     public void Awake()
     {
+        UIData.GameMode = "multi";
         BlackLeft = 12;
         WhiteLeft = 12;
         Board = new Piece[8, 8];
         CheckersGame = new Game(this);
         possibleMoves = new List<GameObject>();
         CreateBoard();
-
-        if (UIData.GameMode != "multi")
-            FindObjectOfType<Canvas>().gameObject.SetActive(false);
     }
 
     public void TookPiece(Vector2Int pos)
@@ -56,10 +36,6 @@ public class CheckersBoard : MonoBehaviour
         if (CheckersGame.Turn == CheckersGame.Player || noAI)
         {
             CheckersGame.Select(pos.x, pos.y);
-            if (UIData.GameMode == "multi")
-            {
-                // TODO Networking?
-            }
         }
     }
 
@@ -115,7 +91,8 @@ public class CheckersBoard : MonoBehaviour
 
     public void Move(Piece piece, int row, int col)
     {
-        movePieceSound.Play();
+        // TODO fix networking position here
+
         Piece temp = Board[piece.Row, piece.Col];
         Board[piece.Row, piece.Col] = Board[row, col];
         Board[row, col] = temp;
@@ -173,14 +150,12 @@ public class CheckersBoard : MonoBehaviour
         {
             Material[] currentMaterial = piece.PieceGameObject.GetComponent<Renderer>().materials;
             currentMaterial[0] = whitePieceMaterial;
-            currentMaterial[1] = sideWhitePieceMaterial;
             piece.PieceGameObject.GetComponent<Renderer>().materials = currentMaterial;
         }
         else if (!selected && piece.Color == PieceColor.Black)
         {
             Material[] currentMaterial = piece.PieceGameObject.GetComponent<Renderer>().materials;
             currentMaterial[0] = blackPieceMaterial;
-            currentMaterial[1] = sideBlackPieceMaterial;
             piece.PieceGameObject.GetComponent<Renderer>().materials = currentMaterial;
         }
         else
@@ -191,7 +166,7 @@ public class CheckersBoard : MonoBehaviour
         if (possibleMove)
         {
             Material[] currentMaterial = piece.PieceGameObject.GetComponent<Renderer>().materials;
-            currentMaterial[1] = chosenPieceMaterial;
+            //currentMaterial[1] = chosenPieceMaterial;
             piece.PieceGameObject.GetComponent<Renderer>().materials = currentMaterial;
         }
     }
@@ -215,11 +190,11 @@ public class CheckersBoard : MonoBehaviour
     {
         // TODO rewrite
 
-        GameObject gameObject = Instantiate(InvisiblePiecePrefab);
-        gameObject.transform.SetParent(transform, true);
-        gameObject.transform.localScale = new Vector3(1, 1, 1);
-        MovePiece(row, col, gameObject);
-        possibleMoves.Add(gameObject);
+        //GameObject gameObject = Instantiate(InvisiblePiecePrefab);
+        //gameObject.transform.SetParent(transform, true);
+        //gameObject.transform.localScale = new Vector3(1, 1, 1);
+        //MovePiece(row, col, gameObject);
+        //possibleMoves.Add(gameObject);
     }
 
     public void DeleteValidMoves()
@@ -238,7 +213,6 @@ public class CheckersBoard : MonoBehaviour
 
         foreach (Piece skip in skipped)
         {
-            skipPieceSound.Play();
             Destroy(skip.PieceGameObject); // TODO move it to the back
             Board[skip.Row, skip.Col] = null;
             if (skip.Color == PieceColor.Black)
@@ -296,7 +270,7 @@ public class CheckersBoard : MonoBehaviour
         // TODO rewrite this code after CheckersNetworking
         return;
 
-        gameObject.transform.position = ((Vector3.right * row) + (Vector3.forward * col) + boardOffset + pieceOffset);
+        gameObject.transform.position = ((Vector3.right * row) + (Vector3.forward * col));
         float yRotation = Camera.main.transform.eulerAngles.y;
         gameObject.transform.eulerAngles = new Vector3(gameObject.transform.eulerAngles.x, -yRotation, gameObject.transform.eulerAngles.z);
     }

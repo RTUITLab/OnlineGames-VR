@@ -16,9 +16,6 @@ public class Piece
 
     public bool King;
 
-    private Vector3 boardOffset = new Vector3(-4f, 0, -4f);
-    private Vector3 pieceOffset = new Vector3(0.5f, 0, 0.5f);
-
     public GameObject PieceGameObject;
     public Dictionary<KeyValuePair<int, int>, List<Piece>> ValidMoves;
 
@@ -55,9 +52,11 @@ public class Piece
 
     public void MovePiece()
     {
+        // TODO rewrite
+
         calcPosition();
-        PieceGameObject.transform.position = ((Vector3.right * posX) + (Vector3.forward * posZ) + boardOffset + pieceOffset);
-        float yRotation = Camera.main.transform.eulerAngles.y;
-        PieceGameObject.transform.eulerAngles = new Vector3(PieceGameObject.transform.eulerAngles.x, -yRotation, PieceGameObject.transform.eulerAngles.z);
+        //PieceGameObject.transform.position = ((Vector3.right * posX) + (Vector3.forward * posZ) + boardOffset + pieceOffset);
+        //float yRotation = Camera.main.transform.eulerAngles.y;
+        //PieceGameObject.transform.eulerAngles = new Vector3(PieceGameObject.transform.eulerAngles.x, -yRotation, PieceGameObject.transform.eulerAngles.z);
     }
 }

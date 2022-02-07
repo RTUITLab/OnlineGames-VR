@@ -31,13 +31,13 @@ public class Game
         }
     }
 
-    public bool Select(int row, int col)
+    public void TryPlace(int row, int col)
     {
-        if (End)
-            return false;
         UpdateValidMoves();
+
         if (Board.SelectedPawn != null)
         {
+            // Place pawn
             if (!Move(row, col))
             {
                 Board.ChangeMaterial(Board.SelectedPawn, false, false);
@@ -46,7 +46,12 @@ public class Game
                 Select(row, col);
             }
         }
+    }
 
+    public bool Select(int row, int col)
+    {
+        UpdateValidMoves();
+       
         Piece piece = Board.GetPiece(row, col);
         if (piece != null && piece.Color == Turn)
         {
@@ -78,6 +83,8 @@ public class Game
 
     private void ChangeTurn()
     {
+        // Enable colliders for enemy or for player
+
         Board.ShowChosenPieces(false);
         if (Turn == PieceColor.Black)
             Turn = PieceColor.White;
