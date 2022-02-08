@@ -7,7 +7,7 @@ public enum PieceColor
     Black
 }
 
-public class Piece
+public class Piece : MonoBehaviour
 {
     public int Row, Col;
     private float posX, posZ;

@@ -28,7 +28,17 @@ public class CheckersBoard : MonoBehaviour
         Board = new Piece[8, 8];
         CheckersGame = new Game(this);
         possibleMoves = new List<GameObject>();
-        CreateBoard();
+        BoardSetup();
+    }
+
+    private void BoardSetup()
+    {
+        Piece[] pieces = GetComponentsInChildren<Piece>();
+
+        foreach (var piece in pieces)
+        {
+            Board[piece.Row, piece.Col] = piece;
+        }
     }
 
     public void TookPiece(Vector2Int pos)
@@ -65,25 +75,6 @@ public class CheckersBoard : MonoBehaviour
         }
     }
 
-    public void CreateBoard()
-    {
-        for (int i = 0; i < 8; i++)
-        {
-            for (int j = 0; j < 8; j++)
-            {
-                Board[i, j] = null;
-
-                if ((i + j) % 2 == 1)
-                {
-                    if (i < 3)
-                        GeneratePiece(i, j, PieceColor.White);
-                    else if (i > 4)
-                        GeneratePiece(i, j, PieceColor.Black);
-                }
-            }
-        }
-    }
-
     public Piece GetPiece(int row, int col)
     {
         return Board[row, col];
@@ -103,21 +94,6 @@ public class CheckersBoard : MonoBehaviour
         {
             MakeKing(row, col);
         }
-    }
-
-    private void GeneratePiece(int x, int y, PieceColor color)
-    {
-        GameObject gameObject = null;
-        //if (color == PieceColor.Black)
-        //    gameObject = Instantiate(BlackPiecePrefab);
-        //else if (color == PieceColor.White)
-        //    gameObject = Instantiate(WhitePiecePrefab);
-        //else
-        //    return;
-
-        Debug.Log($"{color}: pos [{x},{y}]");
-
-        Board[x, y] = new Piece(x, y, color, gameObject);
     }
 
     private void MakeKing(int x, int y)
@@ -267,12 +243,7 @@ public class CheckersBoard : MonoBehaviour
 
     public void MovePiece(int row, int col, GameObject gameObject)
     {
-        // TODO rewrite this code after CheckersNetworking
-        return;
-
-        gameObject.transform.position = ((Vector3.right * row) + (Vector3.forward * col));
-        float yRotation = Camera.main.transform.eulerAngles.y;
-        gameObject.transform.eulerAngles = new Vector3(gameObject.transform.eulerAngles.x, -yRotation, gameObject.transform.eulerAngles.z);
+        gameObject.transform.position = Board[row, col].transform.position + Vector3.up * 1.219256f;
     }
 
     public void LoseGame()
