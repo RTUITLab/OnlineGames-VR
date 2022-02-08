@@ -29,11 +29,40 @@ public class CheckersBoard : MonoBehaviour
         CheckersGame = new Game(this);
         possibleMoves = new List<GameObject>();
         BoardSetup();
+        DisplayBoard();
+    }
+
+    private string ConvertPiece(Piece piece)
+    {
+        if (piece.PieceGameObject != null)
+        {
+            return piece.Color == PieceColor.White ? "1" : "2";
+        }
+        else
+        {
+            return "0";
+        }
+    }
+
+    private void DisplayBoard()
+    {
+        string result = "";
+
+        for (int i = 0; i < 8; i++)
+        {
+            for (int j = 0; j < 8; j++)
+            {
+                result += " " + ConvertPiece(Board[i, j]);
+            }
+            result += '\n';
+        }
+
+        Debug.Log(result);
     }
 
     private void BoardSetup()
     {
-        Piece[] pieces = GetComponentsInChildren<Piece>();
+        Piece[] pieces = transform.parent.GetComponentsInChildren<Piece>();
 
         foreach (var piece in pieces)
         {

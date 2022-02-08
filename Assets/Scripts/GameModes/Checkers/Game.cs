@@ -13,8 +13,7 @@ public class Game
     public Game(CheckersBoard board)
     {
         Board = board;
-        Turn = PieceColor.Black;
-
+        Turn = PieceColor.White;
 
         if (UIData.Color == "Black")
         {
@@ -125,8 +124,8 @@ public class Game
                 }
             }
         }
-
-        if (!HasValidMoves())
+      
+        if (!HasValidMoves()) 
         {
             Board.LoseGame();
         }

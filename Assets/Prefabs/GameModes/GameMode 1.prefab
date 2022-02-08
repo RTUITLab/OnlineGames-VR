@@ -371,7 +371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 2
   Col: 4
-  Color: 1
+  Color: 0
   King: 0
   PieceGameObject: {fileID: 3855782576058728623}
 --- !u!1 &347278609041218553
@@ -483,7 +483,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 3
   Col: 1
-  Color: 1
+  Color: 0
   King: 0
   PieceGameObject: {fileID: 0}
 --- !u!1 &362898448834094364
@@ -2383,7 +2383,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 1
   Col: 7
-  Color: 1
+  Color: 0
   King: 0
   PieceGameObject: {fileID: 3855782575555518879}
 --- !u!1 &2600693504162343098
@@ -3449,7 +3449,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 2
   Col: 6
-  Color: 1
+  Color: 0
   King: 0
   PieceGameObject: {fileID: 3855782574916570654}
 --- !u!1 &3224799862937202692
@@ -3561,7 +3561,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 0
   Col: 0
-  Color: 1
+  Color: 0
   King: 0
   PieceGameObject: {fileID: 3855782575374585725}
 --- !u!1 &3283195390844800647
@@ -4411,7 +4411,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 2
   Col: 0
-  Color: 1
+  Color: 0
   King: 0
   PieceGameObject: {fileID: 3855782574882695674}
 --- !u!1 &4210691309014149741
@@ -5029,7 +5029,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 3
   Col: 3
-  Color: 1
+  Color: 0
   King: 0
   PieceGameObject: {fileID: 0}
 --- !u!1 &4723276308532422962
@@ -6145,7 +6145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 0
   Col: 2
-  Color: 1
+  Color: 0
   King: 0
   PieceGameObject: {fileID: 3855782575267465781}
 --- !u!1 &5597177241940317077
@@ -6257,7 +6257,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 0
   Col: 6
-  Color: 1
+  Color: 0
   King: 0
   PieceGameObject: {fileID: 3855782574540965827}
 --- !u!1 &5621958365156513637
@@ -6501,7 +6501,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 3
   Col: 7
-  Color: 1
+  Color: 0
   King: 0
   PieceGameObject: {fileID: 0}
 --- !u!1 &5706622056950303068
@@ -6613,7 +6613,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 1
   Col: 1
-  Color: 1
+  Color: 0
   King: 0
   PieceGameObject: {fileID: 3855782575675699984}
 --- !u!1 &5763481432935559446
@@ -6725,7 +6725,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 1
   Col: 5
-  Color: 1
+  Color: 0
   King: 0
   PieceGameObject: {fileID: 3855782574838980232}
 --- !u!1 &5883366519186070737
@@ -7718,7 +7718,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 0
   Col: 4
-  Color: 1
+  Color: 0
   King: 0
   PieceGameObject: {fileID: 3855782576059629344}
 --- !u!1 &7273376394620134869
@@ -9760,7 +9760,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 3
   Col: 5
-  Color: 1
+  Color: 0
   King: 0
   PieceGameObject: {fileID: 0}
 --- !u!1 &8692931403251320147
@@ -9916,7 +9916,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 2
   Col: 2
-  Color: 1
+  Color: 0
   King: 0
   PieceGameObject: {fileID: 3855782574111414745}
 --- !u!1 &8698841838387400417
@@ -10072,7 +10072,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 1
   Col: 3
-  Color: 1
+  Color: 0
   King: 0
   PieceGameObject: {fileID: 3855782574232329697}
 --- !u!1 &8896426805794561939
