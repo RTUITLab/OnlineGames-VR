@@ -109,6 +109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 4
   Col: 0
+  StartMaterial: {fileID: 0}
   Color: 1
   King: 0
   PieceGameObject: {fileID: 0}
@@ -259,7 +260,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 4
   Col: 7
-  Color: 0
+  StartMaterial: {fileID: 0}
+  Color: 1
   King: 0
   PieceGameObject: {fileID: 0}
 --- !u!1 &277593338852321727
@@ -371,6 +373,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 2
   Col: 4
+  StartMaterial: {fileID: 0}
   Color: 0
   King: 0
   PieceGameObject: {fileID: 3855782576058728623}
@@ -483,7 +486,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 3
   Col: 1
-  Color: 0
+  StartMaterial: {fileID: 0}
+  Color: 1
   King: 0
   PieceGameObject: {fileID: 0}
 --- !u!1 &362898448834094364
@@ -683,7 +687,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 4
   Col: 3
-  Color: 0
+  StartMaterial: {fileID: 0}
+  Color: 1
   King: 0
   PieceGameObject: {fileID: 0}
 --- !u!1 &688718339828263885
@@ -883,7 +888,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 7
   Col: 4
-  Color: 0
+  StartMaterial: {fileID: 0}
+  Color: 1
   King: 0
   PieceGameObject: {fileID: 0}
 --- !u!1 &1061415119512675208
@@ -1039,7 +1045,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 4
   Col: 5
-  Color: 0
+  StartMaterial: {fileID: 0}
+  Color: 1
   King: 0
   PieceGameObject: {fileID: 0}
 --- !u!1 &1127119640218484375
@@ -1239,7 +1246,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 6
   Col: 7
-  Color: 0
+  StartMaterial: {fileID: 0}
+  Color: 1
   King: 0
   PieceGameObject: {fileID: 0}
 --- !u!1 &1173430038124814901
@@ -1351,7 +1359,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 2
   Col: 5
-  Color: 0
+  StartMaterial: {fileID: 0}
+  Color: 1
   King: 0
   PieceGameObject: {fileID: 0}
 --- !u!1 &1234570982306095318
@@ -1759,7 +1768,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 0
   Col: 5
-  Color: 0
+  StartMaterial: {fileID: 0}
+  Color: 1
   King: 0
   PieceGameObject: {fileID: 0}
 --- !u!1 &1869933856592594162
@@ -1871,7 +1881,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 5
   Col: 2
-  Color: 0
+  StartMaterial: {fileID: 0}
+  Color: 1
   King: 0
   PieceGameObject: {fileID: 0}
 --- !u!1 &1871312031947416558
@@ -1983,7 +1994,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 2
   Col: 7
-  Color: 0
+  StartMaterial: {fileID: 0}
+  Color: 1
   King: 0
   PieceGameObject: {fileID: 0}
 --- !u!1 &2015128148803648645
@@ -2139,7 +2151,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 2
   Col: 1
-  Color: 0
+  StartMaterial: {fileID: 0}
+  Color: 1
   King: 0
   PieceGameObject: {fileID: 0}
 --- !u!1 &2178205373184663863
@@ -2383,6 +2396,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 1
   Col: 7
+  StartMaterial: {fileID: 0}
   Color: 0
   King: 0
   PieceGameObject: {fileID: 3855782575555518879}
@@ -2495,6 +2509,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 6
   Col: 4
+  StartMaterial: {fileID: 0}
   Color: 1
   King: 0
   PieceGameObject: {fileID: 3855782575403275563}
@@ -2607,7 +2622,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 5
   Col: 4
-  Color: 0
+  StartMaterial: {fileID: 0}
+  Color: 1
   King: 0
   PieceGameObject: {fileID: 0}
 --- !u!1 &2820947942954602528
@@ -2719,7 +2735,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 7
   Col: 6
-  Color: 0
+  StartMaterial: {fileID: 0}
+  Color: 1
   King: 0
   PieceGameObject: {fileID: 0}
 --- !u!1 &2829348827378777398
@@ -2831,7 +2848,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 3
   Col: 6
-  Color: 0
+  StartMaterial: {fileID: 0}
+  Color: 1
   King: 0
   PieceGameObject: {fileID: 0}
 --- !u!1 &2912521904990646939
@@ -2987,6 +3005,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 6
   Col: 2
+  StartMaterial: {fileID: 0}
   Color: 1
   King: 0
   PieceGameObject: {fileID: 3855782574134437784}
@@ -3099,7 +3118,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 6
   Col: 3
-  Color: 0
+  StartMaterial: {fileID: 0}
+  Color: 1
   King: 0
   PieceGameObject: {fileID: 0}
 --- !u!1 &2972497263756967127
@@ -3293,6 +3313,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 5
   Col: 5
+  StartMaterial: {fileID: 0}
   Color: 1
   King: 0
   PieceGameObject: {fileID: 3855782574114051251}
@@ -3449,6 +3470,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 2
   Col: 6
+  StartMaterial: {fileID: 0}
   Color: 0
   King: 0
   PieceGameObject: {fileID: 3855782574916570654}
@@ -3561,6 +3583,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 0
   Col: 0
+  StartMaterial: {fileID: 0}
   Color: 0
   King: 0
   PieceGameObject: {fileID: 3855782575374585725}
@@ -3673,6 +3696,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 7
   Col: 5
+  StartMaterial: {fileID: 0}
   Color: 1
   King: 0
   PieceGameObject: {fileID: 8901969294161912400}
@@ -3961,7 +3985,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 2
   Col: 3
-  Color: 0
+  StartMaterial: {fileID: 0}
+  Color: 1
   King: 0
   PieceGameObject: {fileID: 0}
 --- !u!1 &3767012163288817505
@@ -4104,6 +4129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 7
   Col: 3
+  StartMaterial: {fileID: 0}
   Color: 1
   King: 0
   PieceGameObject: {fileID: 3855782576015551799}
@@ -4411,6 +4437,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 2
   Col: 0
+  StartMaterial: {fileID: 0}
   Color: 0
   King: 0
   PieceGameObject: {fileID: 3855782574882695674}
@@ -4649,7 +4676,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 4
   Col: 1
-  Color: 0
+  StartMaterial: {fileID: 0}
+  Color: 1
   King: 0
   PieceGameObject: {fileID: 0}
 --- !u!1 &4548674903591721730
@@ -4761,7 +4789,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 5
   Col: 6
-  Color: 0
+  StartMaterial: {fileID: 0}
+  Color: 1
   King: 0
   PieceGameObject: {fileID: 0}
 --- !u!1 &4657714672107416241
@@ -4917,7 +4946,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 6
   Col: 5
-  Color: 0
+  StartMaterial: {fileID: 0}
+  Color: 1
   King: 0
   PieceGameObject: {fileID: 0}
 --- !u!1 &4718839094234109151
@@ -5029,7 +5059,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 3
   Col: 3
-  Color: 0
+  StartMaterial: {fileID: 0}
+  Color: 1
   King: 0
   PieceGameObject: {fileID: 0}
 --- !u!1 &4723276308532422962
@@ -5141,7 +5172,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 1
   Col: 6
-  Color: 0
+  StartMaterial: {fileID: 0}
+  Color: 1
   King: 0
   PieceGameObject: {fileID: 0}
 --- !u!1 &4818150018530432716
@@ -5297,7 +5329,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 1
   Col: 2
-  Color: 0
+  StartMaterial: {fileID: 0}
+  Color: 1
   King: 0
   PieceGameObject: {fileID: 0}
 --- !u!1 &4915445752793657604
@@ -5409,7 +5442,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 6
   Col: 1
-  Color: 0
+  StartMaterial: {fileID: 0}
+  Color: 1
   King: 0
   PieceGameObject: {fileID: 0}
 --- !u!1 &4926329376318374465
@@ -5521,7 +5555,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 7
   Col: 0
-  Color: 0
+  StartMaterial: {fileID: 0}
+  Color: 1
   King: 0
   PieceGameObject: {fileID: 0}
 --- !u!1 &5087296740976553043
@@ -5677,6 +5712,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 4
   Col: 4
+  StartMaterial: {fileID: 0}
   Color: 1
   King: 0
   PieceGameObject: {fileID: 0}
@@ -5877,6 +5913,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 6
   Col: 0
+  StartMaterial: {fileID: 0}
   Color: 1
   King: 0
   PieceGameObject: {fileID: 3855782575629568935}
@@ -5989,6 +6026,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 4
   Col: 2
+  StartMaterial: {fileID: 0}
   Color: 1
   King: 0
   PieceGameObject: {fileID: 0}
@@ -6145,6 +6183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 0
   Col: 2
+  StartMaterial: {fileID: 0}
   Color: 0
   King: 0
   PieceGameObject: {fileID: 3855782575267465781}
@@ -6257,6 +6296,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 0
   Col: 6
+  StartMaterial: {fileID: 0}
   Color: 0
   King: 0
   PieceGameObject: {fileID: 3855782574540965827}
@@ -6501,7 +6541,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 3
   Col: 7
-  Color: 0
+  StartMaterial: {fileID: 0}
+  Color: 1
   King: 0
   PieceGameObject: {fileID: 0}
 --- !u!1 &5706622056950303068
@@ -6613,6 +6654,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 1
   Col: 1
+  StartMaterial: {fileID: 0}
   Color: 0
   King: 0
   PieceGameObject: {fileID: 3855782575675699984}
@@ -6725,6 +6767,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 1
   Col: 5
+  StartMaterial: {fileID: 0}
   Color: 0
   King: 0
   PieceGameObject: {fileID: 3855782574838980232}
@@ -6837,7 +6880,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 1
   Col: 0
-  Color: 0
+  StartMaterial: {fileID: 0}
+  Color: 1
   King: 0
   PieceGameObject: {fileID: 0}
 --- !u!1 &5910443085806872434
@@ -7075,7 +7119,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 7
   Col: 2
-  Color: 0
+  StartMaterial: {fileID: 0}
+  Color: 1
   King: 0
   PieceGameObject: {fileID: 0}
 --- !u!1 &6286773943988091545
@@ -7494,7 +7539,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 0
   Col: 1
-  Color: 0
+  StartMaterial: {fileID: 0}
+  Color: 1
   King: 0
   PieceGameObject: {fileID: 0}
 --- !u!1 &7061302800914418720
@@ -7606,7 +7652,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 5
   Col: 0
-  Color: 0
+  StartMaterial: {fileID: 0}
+  Color: 1
   King: 0
   PieceGameObject: {fileID: 0}
 --- !u!1 &7215666183562162503
@@ -7718,6 +7765,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 0
   Col: 4
+  StartMaterial: {fileID: 0}
   Color: 0
   King: 0
   PieceGameObject: {fileID: 3855782576059629344}
@@ -7830,6 +7878,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 5
   Col: 1
+  StartMaterial: {fileID: 0}
   Color: 1
   King: 0
   PieceGameObject: {fileID: 3855782574227165776}
@@ -7986,6 +8035,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 7
   Col: 1
+  StartMaterial: {fileID: 0}
   Color: 1
   King: 0
   PieceGameObject: {fileID: 3855782575063938363}
@@ -8186,7 +8236,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 0
   Col: 3
-  Color: 0
+  StartMaterial: {fileID: 0}
+  Color: 1
   King: 0
   PieceGameObject: {fileID: 0}
 --- !u!1 &7477137398074505342
@@ -8298,6 +8349,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 4
   Col: 6
+  StartMaterial: {fileID: 0}
   Color: 1
   King: 0
   PieceGameObject: {fileID: 0}
@@ -8410,7 +8462,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 1
   Col: 4
-  Color: 0
+  StartMaterial: {fileID: 0}
+  Color: 1
   King: 0
   PieceGameObject: {fileID: 0}
 --- !u!1 &7722489742633423579
@@ -8522,7 +8575,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 3
   Col: 0
-  Color: 0
+  StartMaterial: {fileID: 0}
+  Color: 1
   King: 0
   PieceGameObject: {fileID: 0}
 --- !u!1 &7741832476245464775
@@ -8678,6 +8732,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 7
   Col: 7
+  StartMaterial: {fileID: 0}
   Color: 1
   King: 0
   PieceGameObject: {fileID: 3855782574732983367}
@@ -8966,7 +9021,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 3
   Col: 2
-  Color: 0
+  StartMaterial: {fileID: 0}
+  Color: 1
   King: 0
   PieceGameObject: {fileID: 0}
 --- !u!1 &8083832095599719870
@@ -9160,6 +9216,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 6
   Col: 6
+  StartMaterial: {fileID: 0}
   Color: 1
   King: 0
   PieceGameObject: {fileID: 3855782575707539970}
@@ -9316,6 +9373,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 5
   Col: 7
+  StartMaterial: {fileID: 0}
   Color: 1
   King: 0
   PieceGameObject: {fileID: 3855782575276427890}
@@ -9472,7 +9530,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 3
   Col: 4
-  Color: 0
+  StartMaterial: {fileID: 0}
+  Color: 1
   King: 0
   PieceGameObject: {fileID: 0}
 --- !u!1 &8356744932084204150
@@ -9760,7 +9819,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 3
   Col: 5
-  Color: 0
+  StartMaterial: {fileID: 0}
+  Color: 1
   King: 0
   PieceGameObject: {fileID: 0}
 --- !u!1 &8692931403251320147
@@ -9916,6 +9976,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 2
   Col: 2
+  StartMaterial: {fileID: 0}
   Color: 0
   King: 0
   PieceGameObject: {fileID: 3855782574111414745}
@@ -10072,6 +10133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 1
   Col: 3
+  StartMaterial: {fileID: 0}
   Color: 0
   King: 0
   PieceGameObject: {fileID: 3855782574232329697}
@@ -10228,6 +10290,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 5
   Col: 3
+  StartMaterial: {fileID: 0}
   Color: 1
   King: 0
   PieceGameObject: {fileID: 3855782575869724837}
@@ -10428,7 +10491,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 0
   Col: 7
-  Color: 0
+  StartMaterial: {fileID: 0}
+  Color: 1
   King: 0
   PieceGameObject: {fileID: 0}
 --- !u!1 &9152394013597417421

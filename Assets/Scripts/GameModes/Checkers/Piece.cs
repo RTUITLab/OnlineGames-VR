@@ -12,6 +12,7 @@ public class Piece : MonoBehaviour
     public int Row, Col;
     private float posX, posZ;
 
+    public Material StartMaterial;
     public PieceColor Color;
 
     public bool King;
@@ -19,22 +20,14 @@ public class Piece : MonoBehaviour
     public GameObject PieceGameObject;
     public Dictionary<KeyValuePair<int, int>, List<Piece>> ValidMoves;
 
-    public Piece(int row, int col, GameObject gameObject)
+    private void Start()
     {
-        Row = row;
-        Col = col;
-        PieceGameObject = gameObject;
-        MovePiece();
+        StartMaterial = GetComponent<Renderer>().material;
     }
 
-    public Piece(int row, int col, PieceColor color, GameObject gameObjecty)
+    public override string ToString()
     {
-        Row = row;
-        Col = col;
-        Color = color;
-        PieceGameObject = gameObjecty;
-        King = false;
-        MovePiece();
+        return $"{Color.ToString()} [{Row}, {Col}]";
     }
 
     public void Move(int row, int col)

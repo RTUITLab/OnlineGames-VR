@@ -14,6 +14,7 @@ public class Game
     {
         Board = board;
         Turn = PieceColor.White;
+        UIData.Color = "White";
 
         if (UIData.Color == "Black")
         {
@@ -39,7 +40,6 @@ public class Game
             // Place pawn
             if (!Move(row, col))
             {
-                Board.ChangeMaterial(Board.SelectedPawn, false, false);
                 Board.DeleteValidMoves();
                 Board.SelectedPawn = null;
                 Select(row, col);
@@ -52,11 +52,10 @@ public class Game
         UpdateValidMoves();
        
         Piece piece = Board.GetPiece(row, col);
-        if (piece != null && piece.Color == Turn)
+        if (piece.PieceGameObject != null && piece.Color == Turn)
         {
             Board.SelectedPawn = piece;
             ValidMoves = piece.ValidMoves;
-            Board.ChangeMaterial(piece, true, false);
             Board.DrawValidMoves();
             return true;
         }
@@ -84,14 +83,12 @@ public class Game
     {
         // Enable colliders for enemy or for player
 
-        Board.ShowChosenPieces(false);
         if (Turn == PieceColor.Black)
             Turn = PieceColor.White;
         else
             Turn = PieceColor.Black;
 
         Board.DeleteValidMoves();
-        Board.ChangeMaterial(Board.SelectedPawn, false, false);
         Board.CheckWinner();
         UpdateValidMoves();
         Debug.Log("Turn : " + Turn);
@@ -105,9 +102,10 @@ public class Game
             for (int j = 0; j < 8; j++)
             {
                 Piece piece = Board.GetPiece(i, j);
-                if (piece != null && piece.Color == Turn)
+                if (piece.PieceGameObject != null && piece.Color == Turn)
                 {
                     piece.ValidMoves = GetValidMoves(piece);
+                    Debug.Log($"Valid moves for {piece.ToString()}: {piece.ValidMoves.Count}");
                     if (HasSkip(piece))
                         skip = true;
                 }
@@ -129,8 +127,6 @@ public class Game
         {
             Board.LoseGame();
         }
-
-        Board.ShowChosenPieces(true);
     }
 
     private bool HasSkip(Piece piece)
@@ -183,7 +179,7 @@ public class Game
             for (int j = 0; j < 8; j++)
             {
                 Piece piece = Board.GetPiece(i, j);
-                if (piece != null && piece.Color == Turn)
+                if (piece.PieceGameObject != null && piece.Color == Turn)
                 {
                     if (piece.ValidMoves == null)
                         continue;

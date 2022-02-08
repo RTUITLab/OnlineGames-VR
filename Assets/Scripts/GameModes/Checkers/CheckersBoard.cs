@@ -30,6 +30,7 @@ public class CheckersBoard : MonoBehaviour
         possibleMoves = new List<GameObject>();
         BoardSetup();
         DisplayBoard();
+        TookPiece(2, 2);
     }
 
     private string ConvertPiece(Piece piece)
@@ -70,11 +71,11 @@ public class CheckersBoard : MonoBehaviour
         }
     }
 
-    public void TookPiece(Vector2Int pos)
+    public void TookPiece(int row, int col)
     {
         if (CheckersGame.Turn == CheckersGame.Player || noAI)
         {
-            CheckersGame.Select(pos.x, pos.y);
+            CheckersGame.Select(row, col);
         }
     }
 
@@ -137,45 +138,6 @@ public class CheckersBoard : MonoBehaviour
         // TODO change mesh
     }
 
-    public void ChangeMaterial(Piece piece, bool selected, bool possibleMove)
-    {
-        // TODO check this method
-        return;
-
-        if (piece == null)
-            return;
-
-        if (CheckersGame.Turn != CheckersGame.Player)
-        {
-            selected = false;
-            possibleMove = false;
-        }
-
-        if (!selected && piece.Color == PieceColor.White)
-        {
-            Material[] currentMaterial = piece.PieceGameObject.GetComponent<Renderer>().materials;
-            currentMaterial[0] = whitePieceMaterial;
-            piece.PieceGameObject.GetComponent<Renderer>().materials = currentMaterial;
-        }
-        else if (!selected && piece.Color == PieceColor.Black)
-        {
-            Material[] currentMaterial = piece.PieceGameObject.GetComponent<Renderer>().materials;
-            currentMaterial[0] = blackPieceMaterial;
-            piece.PieceGameObject.GetComponent<Renderer>().materials = currentMaterial;
-        }
-        else
-        {
-            piece.PieceGameObject.GetComponent<Renderer>().material = chosenPieceMaterial;
-        }
-
-        if (possibleMove)
-        {
-            Material[] currentMaterial = piece.PieceGameObject.GetComponent<Renderer>().materials;
-            //currentMaterial[1] = chosenPieceMaterial;
-            piece.PieceGameObject.GetComponent<Renderer>().materials = currentMaterial;
-        }
-    }
-
     public void DrawValidMoves()
     {
         if (CheckersGame.Turn != CheckersGame.Player)
@@ -193,22 +155,21 @@ public class CheckersBoard : MonoBehaviour
 
     private void GeneratePosibleMove(int row, int col)
     {
-        // TODO rewrite
-
-        //GameObject gameObject = Instantiate(InvisiblePiecePrefab);
-        //gameObject.transform.SetParent(transform, true);
-        //gameObject.transform.localScale = new Vector3(1, 1, 1);
-        //MovePiece(row, col, gameObject);
-        //possibleMoves.Add(gameObject);
+        Debug.Log($"GeneratePosibleMove [{row},{col}]");
+        Board[row, col].GetComponent<Renderer>().material = chosenPieceMaterial;
     }
 
     public void DeleteValidMoves()
     {
-        for (int i = possibleMoves.Count - 1; i >= 0; i--)
+        System.Collections.IList list = possibleMoves;
+        for (int i = 0; i < list.Count; i++)
         {
-            Destroy(possibleMoves[i]);
-            possibleMoves.RemoveAt(i);
+            KeyValuePair<KeyValuePair<int, int>, List<Piece>> move = (KeyValuePair<KeyValuePair<int, int>, List<Piece>>)list[i];
+            int row = move.Key.Key;
+            int col = move.Key.Value;
+            Board[row, col].GetComponent<Renderer>().material = Board[row, col].StartMaterial;
         }
+        possibleMoves.Clear();
     }
 
     public void RemovePieces(List<Piece> skipped)
@@ -247,27 +208,6 @@ public class CheckersBoard : MonoBehaviour
         CheckersGame.End = true;
         
         // TODO 
-    }
-
-    public void ShowChosenPieces(bool show)
-    {
-        for (int i = 0; i < 8; i++)
-        {
-            for (int j = 0; j < 8; j++)
-            {
-                if (Board[i, j] != null && Board[i, j].Color == CheckersGame.Turn)
-                {
-                    if (show && (Board[i, j].ValidMoves != null && Board[i, j].ValidMoves.Count != 0))
-                    {
-                        ChangeMaterial(Board[i, j], false, true);
-                    }
-                    else
-                    {
-                        ChangeMaterial(Board[i, j], false, false);
-                    }
-                }
-            }
-        }
     }
 
     public void MovePiece(int row, int col, GameObject gameObject)
