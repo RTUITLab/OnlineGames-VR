@@ -297,7 +297,7 @@ public class Game
                 break;
 
             Piece current = Board.GetPiece(i, right);
-            if (current == null)
+            if (current.PieceGameObject == null)
             {
                 if (skipped.Count != 0 && last.Count == 0)
                     break;

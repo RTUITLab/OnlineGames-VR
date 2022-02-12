@@ -30,8 +30,8 @@ public class CheckersBoard : MonoBehaviour
         possibleMoves = new List<GameObject>();
         BoardSetup();
         DisplayBoard();
-        // TookPiece(2, 2);
-          CheckersGame.UpdateValidMoves();
+        TookPiece(2, 2);
+        // CheckersGame.UpdateValidMoves();
     }
 
     private string ConvertPiece(Piece piece)
@@ -113,7 +113,7 @@ public class CheckersBoard : MonoBehaviour
 
     public void Move(Piece piece, int row, int col)
     {
-        // TODO fix networking position here
+        // TODO sent this networking command
 
         Piece temp = Board[piece.Row, piece.Col];
         Board[piece.Row, piece.Col] = Board[row, col];
@@ -121,7 +121,8 @@ public class CheckersBoard : MonoBehaviour
 
         piece.Move(row, col);
 
-        if (row == 7 || row == 0)
+        if ((row == 7 && piece.Color == PieceColor.White) ||
+            (row == 0 && piece.Color == PieceColor.Black))
         {
             MakeKing(row, col);
         }

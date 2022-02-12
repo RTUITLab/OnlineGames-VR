@@ -45,7 +45,7 @@ public class Piece : MonoBehaviour
 
     public void MovePiece()
     {
-        // TODO rewrite
+        // TODO fix piece position here
 
         calcPosition();
         //PieceGameObject.transform.position = ((Vector3.right * posX) + (Vector3.forward * posZ) + boardOffset + pieceOffset);
