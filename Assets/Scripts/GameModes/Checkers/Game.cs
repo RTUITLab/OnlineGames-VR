@@ -81,8 +81,6 @@ public class Game
 
     private void ChangeTurn()
     {
-        // Enable colliders for enemy or for player
-
         if (Turn == PieceColor.Black)
             Turn = PieceColor.White;
         else
@@ -92,6 +90,20 @@ public class Game
         Board.CheckWinner();
         UpdateValidMoves();
         Debug.Log("Turn : " + Turn);
+    }
+
+    public void ToggleAvailablePieces(Piece piece, int validMovesCount)
+    {
+        // Toggle colliders so player can take this piece.
+
+        if (validMovesCount > 0)
+        {
+            // TODO can take this piece
+        }
+        else
+        {
+            // TODO cant take this piece
+        }
     }
 
     public void UpdateValidMoves()
@@ -106,6 +118,7 @@ public class Game
                 {
                     piece.ValidMoves = GetValidMoves(piece);
                     Debug.Log($"Valid moves for {piece.ToString()}: {piece.ValidMoves.Count}");
+                    ToggleAvailablePieces(piece, piece.ValidMoves.Count);
                     if (HasSkip(piece))
                         skip = true;
                 }
