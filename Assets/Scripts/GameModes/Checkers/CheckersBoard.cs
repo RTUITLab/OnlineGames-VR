@@ -30,7 +30,8 @@ public class CheckersBoard : MonoBehaviour
         possibleMoves = new List<GameObject>();
         BoardSetup();
         DisplayBoard();
-        TookPiece(2, 2);
+        // TookPiece(2, 2);
+          CheckersGame.UpdateValidMoves();
     }
 
     private string ConvertPiece(Piece piece)

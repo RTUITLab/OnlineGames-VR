@@ -5,10 +5,10 @@
       "app_key": "application.generated.unity.rocketvr.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "D:\\Unity\\Engine-VR\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "action_manifest_path": "D:\\Unity Projects\\RTUITLab\\OnlineGames-VR\\Assets\\StreamingAssets\\SteamVR\\actions.json",
       "strings": {
         "en_us": {
-          "name": "RocketVR [Testing]"
+          "name": "OnlineGames-VR [Testing]"
         }
       }
     }
