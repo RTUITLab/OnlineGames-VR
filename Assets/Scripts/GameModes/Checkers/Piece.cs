@@ -52,4 +52,14 @@ public class Piece : MonoBehaviour
         //float yRotation = Camera.main.transform.eulerAngles.y;
         //PieceGameObject.transform.eulerAngles = new Vector3(PieceGameObject.transform.eulerAngles.x, -yRotation, PieceGameObject.transform.eulerAngles.z);
     }
+
+    public void MakeKing()
+    {
+        King = true;
+        SpriteRenderer[] kingIcons = PieceGameObject.GetComponentsInChildren<SpriteRenderer>();
+        foreach (var icon in kingIcons)
+        {
+            icon.color = new Color(1, 1, 1, 1);
+        }
+    }
 }

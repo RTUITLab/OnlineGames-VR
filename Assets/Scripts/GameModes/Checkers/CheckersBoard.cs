@@ -129,14 +129,12 @@ public class CheckersBoard : MonoBehaviour
 
     private void MakeKing(int x, int y)
     {
-        if (Board[x, y] == null)
+        if (Board[x, y].PieceGameObject == null)
         {
             return;
         }
 
-        Board[x, y].King = true;
-        
-        // TODO change mesh
+        Board[x, y].MakeKing();
     }
 
     public void DrawValidMoves()
