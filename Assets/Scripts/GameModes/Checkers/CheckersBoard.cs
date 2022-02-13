@@ -19,7 +19,7 @@ public class CheckersBoard : MonoBehaviour
 
     public string gameMode = "single"; // "single" / "multi"
 
-    [SerializeField] private GameModeCheckers manager;
+    [SerializeField] private GameModeCheckersOnline manager;
 
     [SerializeField] private Material whitePieceMaterial;
     [SerializeField] private Material blackPieceMaterial;

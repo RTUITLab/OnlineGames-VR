@@ -6,10 +6,10 @@ using Valve.VR.InteractionSystem;
 
 namespace Gamemode1
 {
-    public class GameModeCheckers : GameMode
+    public class GameModeCheckersOnline : GameMode
     {
-        public static GameModeCheckers Instance;
-        private Game CheckersGame;
+        public static GameModeCheckersOnline Instance;
+        public Game CheckersGame;
 
         private Throwable[] figures;
 
@@ -17,24 +17,11 @@ namespace Gamemode1
         {
             Instance = this;
             figures = GetComponentsInChildren<Throwable>();
-
-            StartCoroutine(SelectTest());
         }
 
         public void SetGame(Game checkersGame)
         {
             CheckersGame = checkersGame;
-        }
-
-        private IEnumerator SelectTest()
-        {
-            yield return new WaitForSeconds(2);
-            CheckersGame.Select(2, 2);
-            yield return new WaitForSeconds(2);
-            CheckersGame.Select(2, 4);
-            yield return new WaitForSeconds(2);
-            CheckersGame.Select(2, 6);
-            yield return new WaitForSeconds(2);
         }
 
         public void PlayerWon(int playerId)
@@ -56,6 +43,8 @@ namespace Gamemode1
                 {
                     closest.PieceGameObject = f.gameObject;
                     closest.Color = f.gameObject.name.Contains("Black") ? PieceColor.Black : PieceColor.White;
+                    f.gameObject.GetComponent<Figure>().Row = closest.Row;
+                    f.gameObject.GetComponent<Figure>().Col = closest.Col;
                 }
             }
         }
