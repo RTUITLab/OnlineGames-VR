@@ -38,6 +38,9 @@ namespace Gamemode1
 
             foreach (var f in figures)
             {
+                if (!f.gameObject.name.Contains("Figure"))
+                    continue;
+
                 Piece closest = GetClosestPiece(f.transform);
                 if (closest != null)
                 {

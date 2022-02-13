@@ -14,7 +14,7 @@ public class Game
     {
         Board = board;
         Turn = PieceColor.White;
-        UIData.Color = "White";
+        UIData.Color = "Black";
 
         if (UIData.Color == "Black")
         {
