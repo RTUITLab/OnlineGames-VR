@@ -7,6 +7,7 @@ namespace Gamemode1
     public class Figure : MonoBehaviour
     {
         [HideInInspector] public int Row, Col;
+        public bool King;
 
         public void OnPickUp()
         {

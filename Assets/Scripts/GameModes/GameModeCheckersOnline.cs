@@ -45,6 +45,7 @@ namespace Gamemode1
                     closest.Color = f.gameObject.name.Contains("Black") ? PieceColor.Black : PieceColor.White;
                     f.gameObject.GetComponent<Figure>().Row = closest.Row;
                     f.gameObject.GetComponent<Figure>().Col = closest.Col;
+                    closest.King = f.gameObject.GetComponent<Figure>().King;
                 }
             }
         }

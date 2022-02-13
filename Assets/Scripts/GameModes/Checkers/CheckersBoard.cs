@@ -72,6 +72,15 @@ public class CheckersBoard : MonoBehaviour
             for (int j = 0; j < 8; j++)
             {
                 result += " " + ConvertPiece(Board[i, 7 - j]);
+
+                if (UIData.GameMode == "multi")
+                {
+                    if ((Board[i, j].Row == 7 && Board[i, j].Color == PieceColor.White) ||
+                        (Board[i, j].Row == 0 && Board[i, j].Color == PieceColor.Black))
+                    {
+                        MakeKing(i, j);
+                    }
+                }
             }
             result += '\n';
         }
@@ -105,7 +114,7 @@ public class CheckersBoard : MonoBehaviour
     public void Update()
     {
         DisplayBoard();
-        UpdateCanvas();
+        UpdateCanvas();  
 
         if (CheckersGame.Player != CheckersGame.Turn && !noAI)
         {
@@ -162,11 +171,10 @@ public class CheckersBoard : MonoBehaviour
     private void MakeKing(int x, int y)
     {
         if (Board[x, y].PieceGameObject == null)
-        {
             return;
-        }
 
-        Board[x, y].MakeKing();
+        if (Board[x, y].King == false)
+            Board[x, y].MakeKing();
     }
 
     public void DrawValidMoves()

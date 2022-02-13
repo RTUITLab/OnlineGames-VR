@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Gamemode1;
+using System.Collections.Generic;
 using UnityEngine;
 
 public enum PieceColor
@@ -55,7 +56,7 @@ public class Piece : MonoBehaviour
 
     public void MakeKing()
     {
-        King = true;
+        PieceGameObject.GetComponent<Figure>().King = true;
         SpriteRenderer[] kingIcons = PieceGameObject.GetComponentsInChildren<SpriteRenderer>();
         foreach (var icon in kingIcons)
         {
