@@ -24,6 +24,8 @@ public class CheckersBoard : MonoBehaviour
     [SerializeField] private Material blackPieceMaterial;
     [SerializeField] private Material chosenPieceMaterial;
 
+    [SerializeField] private Text turnOutput;
+
     public void Awake()
     {
         UIData.GameMode = gameMode;
@@ -95,9 +97,15 @@ public class CheckersBoard : MonoBehaviour
         }
     }
 
+    public void UpdateCanvas()
+    {
+        turnOutput.text = $"Ход: { (CheckersGame.Turn == PieceColor.White ? "Красные" : "Черные") }";
+    }
+
     public void Update()
     {
         DisplayBoard();
+        UpdateCanvas();
 
         if (CheckersGame.Player != CheckersGame.Turn && !noAI)
         {
@@ -121,6 +129,12 @@ public class CheckersBoard : MonoBehaviour
                 //}
             }
         }
+    }
+
+    public void ChangeGameTurn()
+    {
+        Debug.Log("ChangeGameTurn");
+        CheckersGame.ChangeTurn();
     }
 
     public Piece GetPiece(int row, int col)

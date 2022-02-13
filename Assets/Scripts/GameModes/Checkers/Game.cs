@@ -94,6 +94,7 @@ public class Game
         else
             Turn = PieceColor.Black;
 
+
         Board.DontDrawValidMoves();
         Board.CheckWinner();
         UpdateValidMoves();
