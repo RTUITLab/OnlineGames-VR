@@ -140,9 +140,15 @@ public class CheckersBoard : MonoBehaviour
         }
     }
 
-    public void ChangeGameTurn()
+    public void ChangeTurnPressed()
     {
-        Debug.Log("ChangeGameTurn");
+        Debug.Log("ChangeTurn Pressed");
+        FindObjectOfType<LocalPlayer>().SendChangeTurn();
+    }
+
+    // Synchronized with all players.
+    public void ChangeTurn()
+    {
         CheckersGame.ChangeTurn();
     }
 

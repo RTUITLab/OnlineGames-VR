@@ -28,6 +28,11 @@ public class LocalPlayer : MonoBehaviourPunCallbacks
         SendNickname();
     }
 
+    public void SendChangeTurn()
+    {
+        onlinePlayer.ChangeTurn();
+    }
+
     public void SendNickname()
     {
         string nickname = PlayerPrefs.GetString("Nickname");

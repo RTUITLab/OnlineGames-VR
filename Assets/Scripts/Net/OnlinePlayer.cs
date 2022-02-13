@@ -70,4 +70,15 @@ public class OnlinePlayer : MonoBehaviour
         animator.SetFloat("PosX", dir.x);
         animator.SetFloat("PosY", dir.y);
     }
+
+    public void ChangeTurn()
+    {
+        photonView.RPC("changeTurn", RpcTarget.All);
+    }
+
+    [PunRPC]
+    private void changeTurn()
+    {
+        FindObjectOfType<CheckersBoard>().ChangeTurn();
+    }
 }
