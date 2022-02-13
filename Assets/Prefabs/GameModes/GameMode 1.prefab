@@ -4142,7 +4142,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3767012164181545443}
-  - component: {fileID: 7362587600118625366}
+  - component: {fileID: 2271427305200600023}
   m_Layer: 0
   m_Name: GameMode 1
   m_TagString: Untagged
@@ -4190,7 +4190,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7362587600118625366
+--- !u!114 &2271427305200600023
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4199,7 +4199,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3767012164181545442}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c50eb9dc5ddbeda438344b2f0cd5753c, type: 3}
+  m_Script: {fileID: 11500000, guid: ca223ef003663c14ba6e2b4c9acef143, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &3767012164843107780
@@ -7302,7 +7302,7 @@ MonoBehaviour:
   WhiteLeft: 0
   SelectedPawn: {fileID: 0}
   gameMode: multi
-  manager: {fileID: 7362587600118625366}
+  manager: {fileID: 2271427305200600023}
   whitePieceMaterial: {fileID: 2100000, guid: eab1df8edf852954a8e45beb25ae9ae1, type: 2}
   blackPieceMaterial: {fileID: 2100000, guid: 04d49e470ebf2f54ebc72ce897beaa62, type: 2}
   chosenPieceMaterial: {fileID: 2100000, guid: efbaac3856b79174caf7017d3d6d9dda, type: 2}

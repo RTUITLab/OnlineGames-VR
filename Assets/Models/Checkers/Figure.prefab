@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 7671870423456098447}
   - component: {fileID: 4986754966861178310}
   - component: {fileID: 7426600787532756839}
+  - component: {fileID: 1333379672951916852}
   - component: {fileID: 7928659718033715521}
   - component: {fileID: 6766555967048561013}
   - component: {fileID: 904914741445659840}
@@ -170,6 +171,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &1333379672951916852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3855782575312527280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d73756ce264001429c6c0bd49406b61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Row: 0
+  Col: 0
 --- !u!54 &7928659718033715521
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -320,12 +335,34 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1333379672951916852}
+        m_MethodName: OnPickUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   onDetachFromHand:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 3412942956049421492}
         m_MethodName: CatchObj
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1333379672951916852}
+        m_MethodName: OnDetach
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

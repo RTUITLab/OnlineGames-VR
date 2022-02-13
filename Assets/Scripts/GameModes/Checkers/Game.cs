@@ -47,6 +47,12 @@ public class Game
         }
     }
 
+    public void Deselect()
+    {
+        Board.DeleteValidMoves();
+        Board.SelectedPawn = null;
+    }
+
     public bool Select(int row, int col)
     {
         UpdateValidMoves();
@@ -115,7 +121,7 @@ public class Game
             for (int j = 0; j < 8; j++)
             {
                 Piece piece = Board.GetPiece(i, j);
-                if (piece.PieceGameObject != null && piece.Color == Turn)
+                if (piece.PieceGameObject != null && (piece.Color == Turn || UIData.GameMode == "multi"))
                 {
                     piece.ValidMoves = GetValidMoves(piece);
                     Debug.Log($"Valid moves for {piece.ToString()}: {piece.ValidMoves.Count}");
