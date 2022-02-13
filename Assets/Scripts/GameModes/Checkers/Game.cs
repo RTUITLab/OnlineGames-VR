@@ -13,9 +13,10 @@ public class Game
     public Game(CheckersBoard board)
     {
         Board = board;
-        Turn = PieceColor.White;
+        Turn = PieceColor.Black;
         UIData.Color = "Black";
 
+        // TODO AI: Random color in single player.
         if (UIData.Color == "Black")
         {
             Player = PieceColor.Black;
