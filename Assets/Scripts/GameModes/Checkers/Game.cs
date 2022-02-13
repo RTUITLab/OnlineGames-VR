@@ -50,7 +50,8 @@ public class Game
     public bool Select(int row, int col)
     {
         UpdateValidMoves();
-       
+        Board.DeleteValidMoves();
+
         Piece piece = Board.GetPiece(row, col);
         if (piece.PieceGameObject != null && piece.Color == Turn)
         {
