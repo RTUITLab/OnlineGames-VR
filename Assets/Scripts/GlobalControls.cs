@@ -15,7 +15,7 @@ public class GlobalControls : MonoBehaviour
 
     private void Update()
     {
-        restartShortcut = Input.GetKeyDown(KeyCode.R) && Input.GetKey(KeyCode.LeftControl);
+        restartShortcut = Input.GetKeyDown(KeyCode.R);
         if (restartShortcut)
         {
             RestartApp();

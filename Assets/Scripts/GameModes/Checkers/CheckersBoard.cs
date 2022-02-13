@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Gamemode1;
+using System.Collections;
 
 public class CheckersBoard : MonoBehaviour
 {
@@ -13,8 +14,6 @@ public class CheckersBoard : MonoBehaviour
     public Piece SelectedPawn;
 
     private Game CheckersGame;
-
-    private List<GameObject> possibleMoves;
     private bool noAI = false;
 
     public string gameMode = "single"; // "single" / "multi"
@@ -33,10 +32,21 @@ public class CheckersBoard : MonoBehaviour
         Board = new Piece[8, 8];
         CheckersGame = new Game(this);
         manager.SetGame(CheckersGame);
-        possibleMoves = new List<GameObject>();
         BoardSetup();
         DisplayBoard();
-        CheckersGame.UpdateValidMoves();
+        StartCoroutine(SlowLoop());
+    }
+
+
+    private IEnumerator SlowLoop()
+    {
+        while (true)
+        {
+            CheckersGame.UpdateValidMoves();
+
+            // 5 times per second.
+            yield return new WaitForSeconds(0.2f);
+        }
     }
 
     private string ConvertPiece(Piece piece)
@@ -87,7 +97,7 @@ public class CheckersBoard : MonoBehaviour
 
     public void Update()
     {
-                DisplayBoard();
+        DisplayBoard();
 
         if (CheckersGame.Player != CheckersGame.Turn && !noAI)
         {
@@ -147,9 +157,9 @@ public class CheckersBoard : MonoBehaviour
 
     public void DrawValidMoves()
     {
-        if (CheckersGame.Turn != CheckersGame.Player && UIData.GameMode == "multi")
+        if (CheckersGame.Turn != CheckersGame.Player && UIData.GameMode == "single")
             return;
-        DeleteValidMoves();
+        DontDrawValidMoves();
         if (CheckersGame.ValidMoves == null)
             return;
         foreach (KeyValuePair<KeyValuePair<int, int>, List<Piece>> move in CheckersGame.ValidMoves)
@@ -166,21 +176,12 @@ public class CheckersBoard : MonoBehaviour
         Board[row, col].GetComponent<Renderer>().material = chosenPieceMaterial;
     }
 
-    public void DeleteValidMoves()
+    public void DontDrawValidMoves()
     {
         foreach (var piece in Board)
         {
             piece.GetComponent<Renderer>().material = piece.StartMaterial;
         }
-
-        System.Collections.IList list = possibleMoves;
-        for (int i = 0; i < list.Count; i++)
-        {
-            KeyValuePair<KeyValuePair<int, int>, List<Piece>> move = (KeyValuePair<KeyValuePair<int, int>, List<Piece>>)list[i];
-            int row = move.Key.Key;
-            int col = move.Key.Value;
-        }
-        possibleMoves.Clear();
     }
 
     public void RemovePieces(List<Piece> skipped)

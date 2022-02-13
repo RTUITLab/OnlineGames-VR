@@ -40,7 +40,7 @@ public class Game
             // Place pawn
             if (!Move(row, col))
             {
-                Board.DeleteValidMoves();
+                Board.DontDrawValidMoves();
                 Board.SelectedPawn = null;
                 Select(row, col);
             }
@@ -49,14 +49,15 @@ public class Game
 
     public void Deselect()
     {
-        Board.DeleteValidMoves();
+        UpdateValidMoves();
+        Board.DontDrawValidMoves();
         Board.SelectedPawn = null;
     }
 
     public bool Select(int row, int col)
     {
         UpdateValidMoves();
-        Board.DeleteValidMoves();
+        Board.DontDrawValidMoves();
 
         Piece piece = Board.GetPiece(row, col);
         if (piece.PieceGameObject != null && piece.Color == Turn)
@@ -86,14 +87,14 @@ public class Game
         return true;
     }
 
-    private void ChangeTurn()
+    public void ChangeTurn()
     {
         if (Turn == PieceColor.Black)
             Turn = PieceColor.White;
         else
             Turn = PieceColor.Black;
 
-        Board.DeleteValidMoves();
+        Board.DontDrawValidMoves();
         Board.CheckWinner();
         UpdateValidMoves();
         Debug.Log("Turn : " + Turn);
@@ -121,7 +122,7 @@ public class Game
             for (int j = 0; j < 8; j++)
             {
                 Piece piece = Board.GetPiece(i, j);
-                if (piece.PieceGameObject != null && (piece.Color == Turn || UIData.GameMode == "multi"))
+                if (piece.PieceGameObject != null && piece.Color == Turn)
                 {
                     piece.ValidMoves = GetValidMoves(piece);
                     Debug.Log($"Valid moves for {piece.ToString()}: {piece.ValidMoves.Count}");
