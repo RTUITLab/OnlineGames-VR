@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Photon.Pun;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,6 +9,13 @@ namespace Gamemode1
     {
         [HideInInspector] public int Row, Col;
         public bool King;
+        private PhotonView photonView;
+
+        private void Start()
+        {
+            photonView = GetComponent<PhotonView>();
+            PhotonNetwork.AllocateViewID(photonView);
+        }
 
         public void OnPickUp()
         {

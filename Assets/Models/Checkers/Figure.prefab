@@ -185,6 +185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 0
   Col: 0
+  King: 0
 --- !u!54 &7928659718033715521
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -412,7 +413,7 @@ MonoBehaviour:
   photonView: {fileID: 3812459828041540476}
   interaclable: {fileID: 6766555967048561013}
   throwable: {fileID: 6049215814319932329}
-  colider: {fileID: 0}
+  colider: {fileID: 4992124207938488915}
   position: 1
   rotation: 1
 --- !u!64 &4992124207938488915
