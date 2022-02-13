@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Gamemode1;
 
 public class CheckersBoard : MonoBehaviour
 {
@@ -16,17 +17,22 @@ public class CheckersBoard : MonoBehaviour
     private List<GameObject> possibleMoves;
     private bool noAI = false;
 
+    public string gameMode = "single"; // "single" / "multi"
+
+    [SerializeField] private GameModeCheckers manager;
+
     [SerializeField] private Material whitePieceMaterial;
     [SerializeField] private Material blackPieceMaterial;
     [SerializeField] private Material chosenPieceMaterial;
 
     public void Awake()
     {
-        UIData.GameMode = "multi";
+        UIData.GameMode = gameMode;
         BlackLeft = 12;
         WhiteLeft = 12;
         Board = new Piece[8, 8];
         CheckersGame = new Game(this);
+        manager.SetGame(CheckersGame);
         possibleMoves = new List<GameObject>();
         BoardSetup();
         DisplayBoard();
@@ -37,15 +43,15 @@ public class CheckersBoard : MonoBehaviour
     {
         if (piece.PieceGameObject != null)
         {
-            return piece.Color == PieceColor.White ? "1" : "2";
+            return piece.Color == PieceColor.White ? "<color=red>O</color>" : "<color=black>O</color>";
         }
         else
         {
-            return "0";
+            return "<color=gray>O</color>";
         }
     }
 
-    private void DisplayBoard()
+    public void DisplayBoard()
     {
         string result = "";
 
@@ -53,12 +59,12 @@ public class CheckersBoard : MonoBehaviour
         {
             for (int j = 0; j < 8; j++)
             {
-                result += " " + ConvertPiece(Board[i, j]);
+                result += " " + ConvertPiece(Board[i, 7 - j]);
             }
             result += '\n';
         }
 
-        Debug.Log(result);
+        print($"{result}");
     }
 
     private void BoardSetup()
@@ -81,6 +87,8 @@ public class CheckersBoard : MonoBehaviour
 
     public void Update()
     {
+                DisplayBoard();
+
         if (CheckersGame.Player != CheckersGame.Turn && !noAI)
         {
             if (UIData.GameMode == "single")
@@ -139,7 +147,7 @@ public class CheckersBoard : MonoBehaviour
 
     public void DrawValidMoves()
     {
-        if (CheckersGame.Turn != CheckersGame.Player)
+        if (CheckersGame.Turn != CheckersGame.Player && UIData.GameMode == "multi")
             return;
         DeleteValidMoves();
         if (CheckersGame.ValidMoves == null)
@@ -160,13 +168,17 @@ public class CheckersBoard : MonoBehaviour
 
     public void DeleteValidMoves()
     {
+        foreach (var piece in Board)
+        {
+            piece.GetComponent<Renderer>().material = piece.StartMaterial;
+        }
+
         System.Collections.IList list = possibleMoves;
         for (int i = 0; i < list.Count; i++)
         {
             KeyValuePair<KeyValuePair<int, int>, List<Piece>> move = (KeyValuePair<KeyValuePair<int, int>, List<Piece>>)list[i];
             int row = move.Key.Key;
             int col = move.Key.Value;
-            Board[row, col].GetComponent<Renderer>().material = Board[row, col].StartMaterial;
         }
         possibleMoves.Clear();
     }
